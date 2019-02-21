@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="data.dao.mapper.MedrecScoreMapper" >
+  <resultMap id="BaseResultMap" type="data.dao.pojo.MedrecScore" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="mr_year" property="mrYear" jdbcType="DATE" />
+    <result column="score" property="score" jdbcType="DECIMAL" />
+    <result column="aa1" property="aa1" jdbcType="DECIMAL" />
+    <result column="aa2" property="aa2" jdbcType="DECIMAL" />
+    <result column="ab1" property="ab1" jdbcType="DECIMAL" />
+    <result column="ac1" property="ac1" jdbcType="DECIMAL" />
+    <result column="ac2" property="ac2" jdbcType="DECIMAL" />
+    <result column="ac3" property="ac3" jdbcType="DECIMAL" />
+    <result column="ac4" property="ac4" jdbcType="DECIMAL" />
+    <result column="ad1" property="ad1" jdbcType="DECIMAL" />
+    <result column="ba1" property="ba1" jdbcType="DECIMAL" />
+    <result column="bb1" property="bb1" jdbcType="DECIMAL" />
+    <result column="bb2" property="bb2" jdbcType="DECIMAL" />
+    <result column="bb3" property="bb3" jdbcType="DECIMAL" />
+    <result column="bb4" property="bb4" jdbcType="DECIMAL" />
+    <result column="bb5" property="bb5" jdbcType="DECIMAL" />
+    <result column="bc1" property="bc1" jdbcType="DECIMAL" />
+    <result column="bc2" property="bc2" jdbcType="DECIMAL" />
+    <result column="bc3" property="bc3" jdbcType="DECIMAL" />
+    <result column="ca1" property="ca1" jdbcType="DECIMAL" />
+    <result column="ca2" property="ca2" jdbcType="DECIMAL" />
+    <result column="ca3" property="ca3" jdbcType="DECIMAL" />
+    <result column="ca4" property="ca4" jdbcType="DECIMAL" />
+    <result column="ca5" property="ca5" jdbcType="DECIMAL" />
+    <result column="ca6" property="ca6" jdbcType="DECIMAL" />
+    <result column="cb1" property="cb1" jdbcType="DECIMAL" />
+    <result column="cb2" property="cb2" jdbcType="DECIMAL" />
+    <result column="cb3" property="cb3" jdbcType="DECIMAL" />
+    <result column="cb4" property="cb4" jdbcType="DECIMAL" />
+    <result column="cb5" property="cb5" jdbcType="DECIMAL" />
+    <result column="cb6" property="cb6" jdbcType="DECIMAL" />
+    <result column="cb7" property="cb7" jdbcType="DECIMAL" />
+    <result column="cb8" property="cb8" jdbcType="DECIMAL" />
+    <result column="cc1" property="cc1" jdbcType="DECIMAL" />
+    <result column="cc2" property="cc2" jdbcType="DECIMAL" />
+    <result column="cc3" property="cc3" jdbcType="DECIMAL" />
+    <result column="cd1" property="cd1" jdbcType="DECIMAL" />
+    <result column="da1" property="da1" jdbcType="DECIMAL" />
+    <result column="dd1" property="dd1" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, code, mr_year, score, aa1, aa2, ab1, ac1, ac2, ac3, ac4, ad1, ba1, bb1, bb2, 
+    bb3, bb4, bb5, bc1, bc2, bc3, ca1, ca2, ca3, ca4, ca5, ca6, cb1, cb2, cb3, cb4, cb5, 
+    cb6, cb7, cb8, cc1, cc2, cc3, cd1, da1, dd1
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="data.dao.pojo.exp.MedrecScoreExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from medrec_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from medrec_score
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from medrec_score
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="data.dao.pojo.exp.MedrecScoreExample" >
+    delete from medrec_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="data.dao.pojo.MedrecScore" >
+    insert into medrec_score (id, code, mr_year, 
+      score, aa1, aa2, ab1, 
+      ac1, ac2, ac3, ac4, 
+      ad1, ba1, bb1, bb2, 
+      bb3, bb4, bb5, bc1, 
+      bc2, bc3, ca1, ca2, 
+      ca3, ca4, ca5, ca6, 
+      cb1, cb2, cb3, cb4, 
+      cb5, cb6, cb7, cb8, 
+      cc1, cc2, cc3, cd1, 
+      da1, dd1)
+    values (#{id,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{mrYear,jdbcType=DATE}, 
+      #{score,jdbcType=DECIMAL}, #{aa1,jdbcType=DECIMAL}, #{aa2,jdbcType=DECIMAL}, #{ab1,jdbcType=DECIMAL}, 
+      #{ac1,jdbcType=DECIMAL}, #{ac2,jdbcType=DECIMAL}, #{ac3,jdbcType=DECIMAL}, #{ac4,jdbcType=DECIMAL}, 
+      #{ad1,jdbcType=DECIMAL}, #{ba1,jdbcType=DECIMAL}, #{bb1,jdbcType=DECIMAL}, #{bb2,jdbcType=DECIMAL}, 
+      #{bb3,jdbcType=DECIMAL}, #{bb4,jdbcType=DECIMAL}, #{bb5,jdbcType=DECIMAL}, #{bc1,jdbcType=DECIMAL}, 
+      #{bc2,jdbcType=DECIMAL}, #{bc3,jdbcType=DECIMAL}, #{ca1,jdbcType=DECIMAL}, #{ca2,jdbcType=DECIMAL}, 
+      #{ca3,jdbcType=DECIMAL}, #{ca4,jdbcType=DECIMAL}, #{ca5,jdbcType=DECIMAL}, #{ca6,jdbcType=DECIMAL}, 
+      #{cb1,jdbcType=DECIMAL}, #{cb2,jdbcType=DECIMAL}, #{cb3,jdbcType=DECIMAL}, #{cb4,jdbcType=DECIMAL}, 
+      #{cb5,jdbcType=DECIMAL}, #{cb6,jdbcType=DECIMAL}, #{cb7,jdbcType=DECIMAL}, #{cb8,jdbcType=DECIMAL}, 
+      #{cc1,jdbcType=DECIMAL}, #{cc2,jdbcType=DECIMAL}, #{cc3,jdbcType=DECIMAL}, #{cd1,jdbcType=DECIMAL}, 
+      #{da1,jdbcType=DECIMAL}, #{dd1,jdbcType=DECIMAL})
+  </insert>
+  <insert id ="insertBatch" parameterType="java.util.List" >
+    insert into medrec_score 
+      (id, code, mr_year, 
+      score, aa1, aa2, ab1, 
+      ac1, ac2, ac3, ac4, 
+      ad1, ba1, bb1, bb2, 
+      bb3, bb4, bb5, bc1, 
+      bc2, bc3, ca1, ca2, 
+      ca3, ca4, ca5, ca6, 
+      cb1, cb2, cb3, cb4, 
+      cb5, cb6, cb7, cb8, 
+      cc1, cc2, cc3, cd1, 
+      da1, dd1)
+    values
+     <foreach collection ="list" item="medrecScore" index= "index" separator =",">
+         (#{medrecScore.id,jdbcType=VARCHAR}, #{medrecScore.code,jdbcType=VARCHAR}, #{medrecScore.mrYear,jdbcType=DATE},
+	      #{medrecScore.score,jdbcType=DECIMAL}, #{medrecScore.aa1,jdbcType=DECIMAL}, #{medrecScore.aa2,jdbcType=DECIMAL}, #{medrecScore.ab1,jdbcType=DECIMAL}, 
+	      #{medrecScore.ac1,jdbcType=DECIMAL}, #{medrecScore.ac2,jdbcType=DECIMAL}, #{medrecScore.ac3,jdbcType=DECIMAL}, #{medrecScore.ac4,jdbcType=DECIMAL}, 
+	      #{medrecScore.ad1,jdbcType=DECIMAL}, #{medrecScore.ba1,jdbcType=DECIMAL}, #{medrecScore.bb1,jdbcType=DECIMAL}, #{medrecScore.bb2,jdbcType=DECIMAL}, 
+	      #{medrecScore.bb3,jdbcType=DECIMAL}, #{medrecScore.bb4,jdbcType=DECIMAL}, #{medrecScore.bb5,jdbcType=DECIMAL}, #{medrecScore.bc1,jdbcType=DECIMAL}, 
+	      #{medrecScore.bc2,jdbcType=DECIMAL}, #{medrecScore.bc3,jdbcType=DECIMAL}, #{medrecScore.ca1,jdbcType=DECIMAL}, #{medrecScore.ca2,jdbcType=DECIMAL}, 
+	      #{medrecScore.ca3,jdbcType=DECIMAL}, #{medrecScore.ca4,jdbcType=DECIMAL}, #{medrecScore.ca5,jdbcType=DECIMAL}, #{medrecScore.ca6,jdbcType=DECIMAL}, 
+	      #{medrecScore.cb1,jdbcType=DECIMAL}, #{medrecScore.cb2,jdbcType=DECIMAL}, #{medrecScore.cb3,jdbcType=DECIMAL}, #{medrecScore.cb4,jdbcType=DECIMAL}, 
+	      #{medrecScore.cb5,jdbcType=DECIMAL}, #{medrecScore.cb6,jdbcType=DECIMAL}, #{medrecScore.cb7,jdbcType=DECIMAL}, #{medrecScore.cb8,jdbcType=DECIMAL}, 
+	      #{medrecScore.cc1,jdbcType=DECIMAL}, #{medrecScore.cc2,jdbcType=DECIMAL}, #{medrecScore.cc3,jdbcType=DECIMAL}, #{medrecScore.cd1,jdbcType=DECIMAL}, 
+	      #{medrecScore.da1,jdbcType=DECIMAL}, #{medrecScore.dd1,jdbcType=DECIMAL})
+     </foreach>
+  </insert>
+  <insert id="insertSelective" parameterType="data.dao.pojo.MedrecScore" >
+    insert into medrec_score
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="mrYear != null" >
+        mr_year,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="aa1 != null" >
+        aa1,
+      </if>
+      <if test="aa2 != null" >
+        aa2,
+      </if>
+      <if test="ab1 != null" >
+        ab1,
+      </if>
+      <if test="ac1 != null" >
+        ac1,
+      </if>
+      <if test="ac2 != null" >
+        ac2,
+      </if>
+      <if test="ac3 != null" >
+        ac3,
+      </if>
+      <if test="ac4 != null" >
+        ac4,
+      </if>
+      <if test="ad1 != null" >
+        ad1,
+      </if>
+      <if test="ba1 != null" >
+        ba1,
+      </if>
+      <if test="bb1 != null" >
+        bb1,
+      </if>
+      <if test="bb2 != null" >
+        bb2,
+      </if>
+      <if test="bb3 != null" >
+        bb3,
+      </if>
+      <if test="bb4 != null" >
+        bb4,
+      </if>
+      <if test="bb5 != null" >
+        bb5,
+      </if>
+      <if test="bc1 != null" >
+        bc1,
+      </if>
+      <if test="bc2 != null" >
+        bc2,
+      </if>
+      <if test="bc3 != null" >
+        bc3,
+      </if>
+      <if test="ca1 != null" >
+        ca1,
+      </if>
+      <if test="ca2 != null" >
+        ca2,
+      </if>
+      <if test="ca3 != null" >
+        ca3,
+      </if>
+      <if test="ca4 != null" >
+        ca4,
+      </if>
+      <if test="ca5 != null" >
+        ca5,
+      </if>
+      <if test="ca6 != null" >
+        ca6,
+      </if>
+      <if test="cb1 != null" >
+        cb1,
+      </if>
+      <if test="cb2 != null" >
+        cb2,
+      </if>
+      <if test="cb3 != null" >
+        cb3,
+      </if>
+      <if test="cb4 != null" >
+        cb4,
+      </if>
+      <if test="cb5 != null" >
+        cb5,
+      </if>
+      <if test="cb6 != null" >
+        cb6,
+      </if>
+      <if test="cb7 != null" >
+        cb7,
+      </if>
+      <if test="cb8 != null" >
+        cb8,
+      </if>
+      <if test="cc1 != null" >
+        cc1,
+      </if>
+      <if test="cc2 != null" >
+        cc2,
+      </if>
+      <if test="cc3 != null" >
+        cc3,
+      </if>
+      <if test="cd1 != null" >
+        cd1,
+      </if>
+      <if test="da1 != null" >
+        da1,
+      </if>
+      <if test="dd1 != null" >
+        dd1,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="mrYear != null" >
+        #{mrYear,jdbcType=DATE},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=DECIMAL},
+      </if>
+      <if test="aa1 != null" >
+        #{aa1,jdbcType=DECIMAL},
+      </if>
+      <if test="aa2 != null" >
+        #{aa2,jdbcType=DECIMAL},
+      </if>
+      <if test="ab1 != null" >
+        #{ab1,jdbcType=DECIMAL},
+      </if>
+      <if test="ac1 != null" >
+        #{ac1,jdbcType=DECIMAL},
+      </if>
+      <if test="ac2 != null" >
+        #{ac2,jdbcType=DECIMAL},
+      </if>
+      <if test="ac3 != null" >
+        #{ac3,jdbcType=DECIMAL},
+      </if>
+      <if test="ac4 != null" >
+        #{ac4,jdbcType=DECIMAL},
+      </if>
+      <if test="ad1 != null" >
+        #{ad1,jdbcType=DECIMAL},
+      </if>
+      <if test="ba1 != null" >
+        #{ba1,jdbcType=DECIMAL},
+      </if>
+      <if test="bb1 != null" >
+        #{bb1,jdbcType=DECIMAL},
+      </if>
+      <if test="bb2 != null" >
+        #{bb2,jdbcType=DECIMAL},
+      </if>
+      <if test="bb3 != null" >
+        #{bb3,jdbcType=DECIMAL},
+      </if>
+      <if test="bb4 != null" >
+        #{bb4,jdbcType=DECIMAL},
+      </if>
+      <if test="bb5 != null" >
+        #{bb5,jdbcType=DECIMAL},
+      </if>
+      <if test="bc1 != null" >
+        #{bc1,jdbcType=DECIMAL},
+      </if>
+      <if test="bc2 != null" >
+        #{bc2,jdbcType=DECIMAL},
+      </if>
+      <if test="bc3 != null" >
+        #{bc3,jdbcType=DECIMAL},
+      </if>
+      <if test="ca1 != null" >
+        #{ca1,jdbcType=DECIMAL},
+      </if>
+      <if test="ca2 != null" >
+        #{ca2,jdbcType=DECIMAL},
+      </if>
+      <if test="ca3 != null" >
+        #{ca3,jdbcType=DECIMAL},
+      </if>
+      <if test="ca4 != null" >
+        #{ca4,jdbcType=DECIMAL},
+      </if>
+      <if test="ca5 != null" >
+        #{ca5,jdbcType=DECIMAL},
+      </if>
+      <if test="ca6 != null" >
+        #{ca6,jdbcType=DECIMAL},
+      </if>
+      <if test="cb1 != null" >
+        #{cb1,jdbcType=DECIMAL},
+      </if>
+      <if test="cb2 != null" >
+        #{cb2,jdbcType=DECIMAL},
+      </if>
+      <if test="cb3 != null" >
+        #{cb3,jdbcType=DECIMAL},
+      </if>
+      <if test="cb4 != null" >
+        #{cb4,jdbcType=DECIMAL},
+      </if>
+      <if test="cb5 != null" >
+        #{cb5,jdbcType=DECIMAL},
+      </if>
+      <if test="cb6 != null" >
+        #{cb6,jdbcType=DECIMAL},
+      </if>
+      <if test="cb7 != null" >
+        #{cb7,jdbcType=DECIMAL},
+      </if>
+      <if test="cb8 != null" >
+        #{cb8,jdbcType=DECIMAL},
+      </if>
+      <if test="cc1 != null" >
+        #{cc1,jdbcType=DECIMAL},
+      </if>
+      <if test="cc2 != null" >
+        #{cc2,jdbcType=DECIMAL},
+      </if>
+      <if test="cc3 != null" >
+        #{cc3,jdbcType=DECIMAL},
+      </if>
+      <if test="cd1 != null" >
+        #{cd1,jdbcType=DECIMAL},
+      </if>
+      <if test="da1 != null" >
+        #{da1,jdbcType=DECIMAL},
+      </if>
+      <if test="dd1 != null" >
+        #{dd1,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="data.dao.pojo.exp.MedrecScoreExample" resultType="java.lang.Integer" >
+    select count(*) from medrec_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update medrec_score
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null" >
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mrYear != null" >
+        mr_year = #{record.mrYear,jdbcType=DATE},
+      </if>
+      <if test="record.score != null" >
+        score = #{record.score,jdbcType=DECIMAL},
+      </if>
+      <if test="record.aa1 != null" >
+        aa1 = #{record.aa1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.aa2 != null" >
+        aa2 = #{record.aa2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ab1 != null" >
+        ab1 = #{record.ab1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ac1 != null" >
+        ac1 = #{record.ac1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ac2 != null" >
+        ac2 = #{record.ac2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ac3 != null" >
+        ac3 = #{record.ac3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ac4 != null" >
+        ac4 = #{record.ac4,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ad1 != null" >
+        ad1 = #{record.ad1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ba1 != null" >
+        ba1 = #{record.ba1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bb1 != null" >
+        bb1 = #{record.bb1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bb2 != null" >
+        bb2 = #{record.bb2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bb3 != null" >
+        bb3 = #{record.bb3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bb4 != null" >
+        bb4 = #{record.bb4,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bb5 != null" >
+        bb5 = #{record.bb5,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bc1 != null" >
+        bc1 = #{record.bc1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bc2 != null" >
+        bc2 = #{record.bc2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bc3 != null" >
+        bc3 = #{record.bc3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca1 != null" >
+        ca1 = #{record.ca1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca2 != null" >
+        ca2 = #{record.ca2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca3 != null" >
+        ca3 = #{record.ca3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca4 != null" >
+        ca4 = #{record.ca4,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca5 != null" >
+        ca5 = #{record.ca5,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ca6 != null" >
+        ca6 = #{record.ca6,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb1 != null" >
+        cb1 = #{record.cb1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb2 != null" >
+        cb2 = #{record.cb2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb3 != null" >
+        cb3 = #{record.cb3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb4 != null" >
+        cb4 = #{record.cb4,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb5 != null" >
+        cb5 = #{record.cb5,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb6 != null" >
+        cb6 = #{record.cb6,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb7 != null" >
+        cb7 = #{record.cb7,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cb8 != null" >
+        cb8 = #{record.cb8,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cc1 != null" >
+        cc1 = #{record.cc1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cc2 != null" >
+        cc2 = #{record.cc2,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cc3 != null" >
+        cc3 = #{record.cc3,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cd1 != null" >
+        cd1 = #{record.cd1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.da1 != null" >
+        da1 = #{record.da1,jdbcType=DECIMAL},
+      </if>
+      <if test="record.dd1 != null" >
+        dd1 = #{record.dd1,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update medrec_score
+    set id = #{record.id,jdbcType=VARCHAR},
+      code = #{record.code,jdbcType=VARCHAR},
+      mr_year = #{record.mrYear,jdbcType=DATE},
+      score = #{record.score,jdbcType=DECIMAL},
+      aa1 = #{record.aa1,jdbcType=DECIMAL},
+      aa2 = #{record.aa2,jdbcType=DECIMAL},
+      ab1 = #{record.ab1,jdbcType=DECIMAL},
+      ac1 = #{record.ac1,jdbcType=DECIMAL},
+      ac2 = #{record.ac2,jdbcType=DECIMAL},
+      ac3 = #{record.ac3,jdbcType=DECIMAL},
+      ac4 = #{record.ac4,jdbcType=DECIMAL},
+      ad1 = #{record.ad1,jdbcType=DECIMAL},
+      ba1 = #{record.ba1,jdbcType=DECIMAL},
+      bb1 = #{record.bb1,jdbcType=DECIMAL},
+      bb2 = #{record.bb2,jdbcType=DECIMAL},
+      bb3 = #{record.bb3,jdbcType=DECIMAL},
+      bb4 = #{record.bb4,jdbcType=DECIMAL},
+      bb5 = #{record.bb5,jdbcType=DECIMAL},
+      bc1 = #{record.bc1,jdbcType=DECIMAL},
+      bc2 = #{record.bc2,jdbcType=DECIMAL},
+      bc3 = #{record.bc3,jdbcType=DECIMAL},
+      ca1 = #{record.ca1,jdbcType=DECIMAL},
+      ca2 = #{record.ca2,jdbcType=DECIMAL},
+      ca3 = #{record.ca3,jdbcType=DECIMAL},
+      ca4 = #{record.ca4,jdbcType=DECIMAL},
+      ca5 = #{record.ca5,jdbcType=DECIMAL},
+      ca6 = #{record.ca6,jdbcType=DECIMAL},
+      cb1 = #{record.cb1,jdbcType=DECIMAL},
+      cb2 = #{record.cb2,jdbcType=DECIMAL},
+      cb3 = #{record.cb3,jdbcType=DECIMAL},
+      cb4 = #{record.cb4,jdbcType=DECIMAL},
+      cb5 = #{record.cb5,jdbcType=DECIMAL},
+      cb6 = #{record.cb6,jdbcType=DECIMAL},
+      cb7 = #{record.cb7,jdbcType=DECIMAL},
+      cb8 = #{record.cb8,jdbcType=DECIMAL},
+      cc1 = #{record.cc1,jdbcType=DECIMAL},
+      cc2 = #{record.cc2,jdbcType=DECIMAL},
+      cc3 = #{record.cc3,jdbcType=DECIMAL},
+      cd1 = #{record.cd1,jdbcType=DECIMAL},
+      da1 = #{record.da1,jdbcType=DECIMAL},
+      dd1 = #{record.dd1,jdbcType=DECIMAL}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="data.dao.pojo.MedrecScore" >
+    update medrec_score
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="mrYear != null" >
+        mr_year = #{mrYear,jdbcType=DATE},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=DECIMAL},
+      </if>
+      <if test="aa1 != null" >
+        aa1 = #{aa1,jdbcType=DECIMAL},
+      </if>
+      <if test="aa2 != null" >
+        aa2 = #{aa2,jdbcType=DECIMAL},
+      </if>
+      <if test="ab1 != null" >
+        ab1 = #{ab1,jdbcType=DECIMAL},
+      </if>
+      <if test="ac1 != null" >
+        ac1 = #{ac1,jdbcType=DECIMAL},
+      </if>
+      <if test="ac2 != null" >
+        ac2 = #{ac2,jdbcType=DECIMAL},
+      </if>
+      <if test="ac3 != null" >
+        ac3 = #{ac3,jdbcType=DECIMAL},
+      </if>
+      <if test="ac4 != null" >
+        ac4 = #{ac4,jdbcType=DECIMAL},
+      </if>
+      <if test="ad1 != null" >
+        ad1 = #{ad1,jdbcType=DECIMAL},
+      </if>
+      <if test="ba1 != null" >
+        ba1 = #{ba1,jdbcType=DECIMAL},
+      </if>
+      <if test="bb1 != null" >
+        bb1 = #{bb1,jdbcType=DECIMAL},
+      </if>
+      <if test="bb2 != null" >
+        bb2 = #{bb2,jdbcType=DECIMAL},
+      </if>
+      <if test="bb3 != null" >
+        bb3 = #{bb3,jdbcType=DECIMAL},
+      </if>
+      <if test="bb4 != null" >
+        bb4 = #{bb4,jdbcType=DECIMAL},
+      </if>
+      <if test="bb5 != null" >
+        bb5 = #{bb5,jdbcType=DECIMAL},
+      </if>
+      <if test="bc1 != null" >
+        bc1 = #{bc1,jdbcType=DECIMAL},
+      </if>
+      <if test="bc2 != null" >
+        bc2 = #{bc2,jdbcType=DECIMAL},
+      </if>
+      <if test="bc3 != null" >
+        bc3 = #{bc3,jdbcType=DECIMAL},
+      </if>
+      <if test="ca1 != null" >
+        ca1 = #{ca1,jdbcType=DECIMAL},
+      </if>
+      <if test="ca2 != null" >
+        ca2 = #{ca2,jdbcType=DECIMAL},
+      </if>
+      <if test="ca3 != null" >
+        ca3 = #{ca3,jdbcType=DECIMAL},
+      </if>
+      <if test="ca4 != null" >
+        ca4 = #{ca4,jdbcType=DECIMAL},
+      </if>
+      <if test="ca5 != null" >
+        ca5 = #{ca5,jdbcType=DECIMAL},
+      </if>
+      <if test="ca6 != null" >
+        ca6 = #{ca6,jdbcType=DECIMAL},
+      </if>
+      <if test="cb1 != null" >
+        cb1 = #{cb1,jdbcType=DECIMAL},
+      </if>
+      <if test="cb2 != null" >
+        cb2 = #{cb2,jdbcType=DECIMAL},
+      </if>
+      <if test="cb3 != null" >
+        cb3 = #{cb3,jdbcType=DECIMAL},
+      </if>
+      <if test="cb4 != null" >
+        cb4 = #{cb4,jdbcType=DECIMAL},
+      </if>
+      <if test="cb5 != null" >
+        cb5 = #{cb5,jdbcType=DECIMAL},
+      </if>
+      <if test="cb6 != null" >
+        cb6 = #{cb6,jdbcType=DECIMAL},
+      </if>
+      <if test="cb7 != null" >
+        cb7 = #{cb7,jdbcType=DECIMAL},
+      </if>
+      <if test="cb8 != null" >
+        cb8 = #{cb8,jdbcType=DECIMAL},
+      </if>
+      <if test="cc1 != null" >
+        cc1 = #{cc1,jdbcType=DECIMAL},
+      </if>
+      <if test="cc2 != null" >
+        cc2 = #{cc2,jdbcType=DECIMAL},
+      </if>
+      <if test="cc3 != null" >
+        cc3 = #{cc3,jdbcType=DECIMAL},
+      </if>
+      <if test="cd1 != null" >
+        cd1 = #{cd1,jdbcType=DECIMAL},
+      </if>
+      <if test="da1 != null" >
+        da1 = #{da1,jdbcType=DECIMAL},
+      </if>
+      <if test="dd1 != null" >
+        dd1 = #{dd1,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="data.dao.pojo.MedrecScore" >
+    update medrec_score
+    set code = #{code,jdbcType=VARCHAR},
+      mr_year = #{mrYear,jdbcType=DATE},
+      score = #{score,jdbcType=DECIMAL},
+      aa1 = #{aa1,jdbcType=DECIMAL},
+      aa2 = #{aa2,jdbcType=DECIMAL},
+      ab1 = #{ab1,jdbcType=DECIMAL},
+      ac1 = #{ac1,jdbcType=DECIMAL},
+      ac2 = #{ac2,jdbcType=DECIMAL},
+      ac3 = #{ac3,jdbcType=DECIMAL},
+      ac4 = #{ac4,jdbcType=DECIMAL},
+      ad1 = #{ad1,jdbcType=DECIMAL},
+      ba1 = #{ba1,jdbcType=DECIMAL},
+      bb1 = #{bb1,jdbcType=DECIMAL},
+      bb2 = #{bb2,jdbcType=DECIMAL},
+      bb3 = #{bb3,jdbcType=DECIMAL},
+      bb4 = #{bb4,jdbcType=DECIMAL},
+      bb5 = #{bb5,jdbcType=DECIMAL},
+      bc1 = #{bc1,jdbcType=DECIMAL},
+      bc2 = #{bc2,jdbcType=DECIMAL},
+      bc3 = #{bc3,jdbcType=DECIMAL},
+      ca1 = #{ca1,jdbcType=DECIMAL},
+      ca2 = #{ca2,jdbcType=DECIMAL},
+      ca3 = #{ca3,jdbcType=DECIMAL},
+      ca4 = #{ca4,jdbcType=DECIMAL},
+      ca5 = #{ca5,jdbcType=DECIMAL},
+      ca6 = #{ca6,jdbcType=DECIMAL},
+      cb1 = #{cb1,jdbcType=DECIMAL},
+      cb2 = #{cb2,jdbcType=DECIMAL},
+      cb3 = #{cb3,jdbcType=DECIMAL},
+      cb4 = #{cb4,jdbcType=DECIMAL},
+      cb5 = #{cb5,jdbcType=DECIMAL},
+      cb6 = #{cb6,jdbcType=DECIMAL},
+      cb7 = #{cb7,jdbcType=DECIMAL},
+      cb8 = #{cb8,jdbcType=DECIMAL},
+      cc1 = #{cc1,jdbcType=DECIMAL},
+      cc2 = #{cc2,jdbcType=DECIMAL},
+      cc3 = #{cc3,jdbcType=DECIMAL},
+      cd1 = #{cd1,jdbcType=DECIMAL},
+      da1 = #{da1,jdbcType=DECIMAL},
+      dd1 = #{dd1,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

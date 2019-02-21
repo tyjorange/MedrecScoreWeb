@@ -1,0 +1,2834 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="data.dao.mapper.MedrecMapper" >
+  <resultMap id="BaseResultMap" type="data.dao.pojo.Medrec" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="CHAR" />
+    <result column="mr_year" property="mrYear" jdbcType="DATE" />
+    <result column="mr_quarter" property="mrQuarter" jdbcType="BIT" />
+    <result column="c3" property="c3" jdbcType="VARCHAR" />
+    <result column="c4" property="c4" jdbcType="VARCHAR" />
+    <result column="c5" property="c5" jdbcType="SMALLINT" />
+    <result column="c6" property="c6" jdbcType="VARCHAR" />
+    <result column="c7" property="c7" jdbcType="VARCHAR" />
+    <result column="c8" property="c8" jdbcType="VARCHAR" />
+    <result column="c9" property="c9" jdbcType="DATE" />
+    <result column="c10" property="c10" jdbcType="DECIMAL" />
+    <result column="c11" property="c11" jdbcType="VARCHAR" />
+    <result column="c12" property="c12" jdbcType="DECIMAL" />
+    <result column="c13" property="c13" jdbcType="INTEGER" />
+    <result column="c14" property="c14" jdbcType="INTEGER" />
+    <result column="c15" property="c15" jdbcType="VARCHAR" />
+    <result column="c16" property="c16" jdbcType="VARCHAR" />
+    <result column="c17" property="c17" jdbcType="VARCHAR" />
+    <result column="c18" property="c18" jdbcType="VARCHAR" />
+    <result column="c19" property="c19" jdbcType="VARCHAR" />
+    <result column="c20" property="c20" jdbcType="VARCHAR" />
+    <result column="c21" property="c21" jdbcType="VARCHAR" />
+    <result column="c22" property="c22" jdbcType="VARCHAR" />
+    <result column="c23" property="c23" jdbcType="VARCHAR" />
+    <result column="c24" property="c24" jdbcType="VARCHAR" />
+    <result column="c25" property="c25" jdbcType="VARCHAR" />
+    <result column="c26" property="c26" jdbcType="VARCHAR" />
+    <result column="c27" property="c27" jdbcType="VARCHAR" />
+    <result column="c28" property="c28" jdbcType="VARCHAR" />
+    <result column="c29" property="c29" jdbcType="VARCHAR" />
+    <result column="c30" property="c30" jdbcType="VARCHAR" />
+    <result column="c31" property="c31" jdbcType="VARCHAR" />
+    <result column="c32" property="c32" jdbcType="VARCHAR" />
+    <result column="c33" property="c33" jdbcType="VARCHAR" />
+    <result column="c34" property="c34" jdbcType="DATE" />
+    <result column="c35" property="c35" jdbcType="TINYINT" />
+    <result column="c36" property="c36" jdbcType="TINYINT" />
+    <result column="c37" property="c37" jdbcType="VARCHAR" />
+    <result column="c38" property="c38" jdbcType="VARCHAR" />
+    <result column="c39" property="c39" jdbcType="DATE" />
+    <result column="c40" property="c40" jdbcType="TINYINT" />
+    <result column="c41" property="c41" jdbcType="TINYINT" />
+    <result column="c42" property="c42" jdbcType="VARCHAR" />
+    <result column="c43" property="c43" jdbcType="SMALLINT" />
+    <result column="c44" property="c44" jdbcType="VARCHAR" />
+    <result column="c45" property="c45" jdbcType="VARCHAR" />
+    <result column="c46" property="c46" jdbcType="VARCHAR" />
+    <result column="c47" property="c47" jdbcType="VARCHAR" />
+    <result column="c48" property="c48" jdbcType="VARCHAR" />
+    <result column="c49" property="c49" jdbcType="VARCHAR" />
+    <result column="c50" property="c50" jdbcType="VARCHAR" />
+    <result column="c51" property="c51" jdbcType="VARCHAR" />
+    <result column="c52" property="c52" jdbcType="VARCHAR" />
+    <result column="c53" property="c53" jdbcType="VARCHAR" />
+    <result column="c54" property="c54" jdbcType="VARCHAR" />
+    <result column="c55" property="c55" jdbcType="VARCHAR" />
+    <result column="c56" property="c56" jdbcType="VARCHAR" />
+    <result column="c57" property="c57" jdbcType="VARCHAR" />
+    <result column="c58" property="c58" jdbcType="VARCHAR" />
+    <result column="c59" property="c59" jdbcType="VARCHAR" />
+    <result column="c60" property="c60" jdbcType="VARCHAR" />
+    <result column="c61" property="c61" jdbcType="VARCHAR" />
+    <result column="c62" property="c62" jdbcType="VARCHAR" />
+    <result column="c63" property="c63" jdbcType="VARCHAR" />
+    <result column="c64" property="c64" jdbcType="VARCHAR" />
+    <result column="c65" property="c65" jdbcType="VARCHAR" />
+    <result column="c66" property="c66" jdbcType="VARCHAR" />
+    <result column="c67" property="c67" jdbcType="VARCHAR" />
+    <result column="c68" property="c68" jdbcType="VARCHAR" />
+    <result column="c69" property="c69" jdbcType="VARCHAR" />
+    <result column="c70" property="c70" jdbcType="VARCHAR" />
+    <result column="c71" property="c71" jdbcType="VARCHAR" />
+    <result column="c72" property="c72" jdbcType="VARCHAR" />
+    <result column="c73" property="c73" jdbcType="VARCHAR" />
+    <result column="c74" property="c74" jdbcType="VARCHAR" />
+    <result column="c75" property="c75" jdbcType="VARCHAR" />
+    <result column="c76" property="c76" jdbcType="VARCHAR" />
+    <result column="c77" property="c77" jdbcType="VARCHAR" />
+    <result column="c78" property="c78" jdbcType="VARCHAR" />
+    <result column="c79" property="c79" jdbcType="VARCHAR" />
+    <result column="c80" property="c80" jdbcType="VARCHAR" />
+    <result column="c81" property="c81" jdbcType="VARCHAR" />
+    <result column="c82" property="c82" jdbcType="VARCHAR" />
+    <result column="c83" property="c83" jdbcType="VARCHAR" />
+    <result column="c84" property="c84" jdbcType="VARCHAR" />
+    <result column="c85" property="c85" jdbcType="VARCHAR" />
+    <result column="c86" property="c86" jdbcType="VARCHAR" />
+    <result column="c87" property="c87" jdbcType="VARCHAR" />
+    <result column="c88" property="c88" jdbcType="VARCHAR" />
+    <result column="c89" property="c89" jdbcType="VARCHAR" />
+    <result column="c90" property="c90" jdbcType="VARCHAR" />
+    <result column="c91" property="c91" jdbcType="VARCHAR" />
+    <result column="c92" property="c92" jdbcType="VARCHAR" />
+    <result column="c93" property="c93" jdbcType="VARCHAR" />
+    <result column="c94" property="c94" jdbcType="VARCHAR" />
+    <result column="c95" property="c95" jdbcType="VARCHAR" />
+    <result column="c96" property="c96" jdbcType="VARCHAR" />
+    <result column="c97" property="c97" jdbcType="VARCHAR" />
+    <result column="c98" property="c98" jdbcType="VARCHAR" />
+    <result column="c99" property="c99" jdbcType="VARCHAR" />
+    <result column="c100" property="c100" jdbcType="VARCHAR" />
+    <result column="c101" property="c101" jdbcType="VARCHAR" />
+    <result column="c102" property="c102" jdbcType="VARCHAR" />
+    <result column="c103" property="c103" jdbcType="VARCHAR" />
+    <result column="c104" property="c104" jdbcType="VARCHAR" />
+    <result column="c105" property="c105" jdbcType="VARCHAR" />
+    <result column="c106" property="c106" jdbcType="VARCHAR" />
+    <result column="c107" property="c107" jdbcType="VARCHAR" />
+    <result column="c108" property="c108" jdbcType="VARCHAR" />
+    <result column="c109" property="c109" jdbcType="VARCHAR" />
+    <result column="c110" property="c110" jdbcType="VARCHAR" />
+    <result column="c111" property="c111" jdbcType="VARCHAR" />
+    <result column="c112" property="c112" jdbcType="VARCHAR" />
+    <result column="c113" property="c113" jdbcType="VARCHAR" />
+    <result column="c114" property="c114" jdbcType="VARCHAR" />
+    <result column="c115" property="c115" jdbcType="DATE" />
+    <result column="c116" property="c116" jdbcType="VARCHAR" />
+    <result column="c117" property="c117" jdbcType="DATE" />
+    <result column="c118" property="c118" jdbcType="VARCHAR" />
+    <result column="c119" property="c119" jdbcType="VARCHAR" />
+    <result column="c120" property="c120" jdbcType="VARCHAR" />
+    <result column="c121" property="c121" jdbcType="VARCHAR" />
+    <result column="c122" property="c122" jdbcType="VARCHAR" />
+    <result column="c123" property="c123" jdbcType="VARCHAR" />
+    <result column="c124" property="c124" jdbcType="VARCHAR" />
+    <result column="c125" property="c125" jdbcType="VARCHAR" />
+    <result column="c126" property="c126" jdbcType="VARCHAR" />
+    <result column="c127" property="c127" jdbcType="VARCHAR" />
+    <result column="c128" property="c128" jdbcType="DATE" />
+    <result column="c129" property="c129" jdbcType="VARCHAR" />
+    <result column="c130" property="c130" jdbcType="VARCHAR" />
+    <result column="c131" property="c131" jdbcType="VARCHAR" />
+    <result column="c132" property="c132" jdbcType="VARCHAR" />
+    <result column="c133" property="c133" jdbcType="VARCHAR" />
+    <result column="c134" property="c134" jdbcType="VARCHAR" />
+    <result column="c135" property="c135" jdbcType="VARCHAR" />
+    <result column="c136" property="c136" jdbcType="VARCHAR" />
+    <result column="c137" property="c137" jdbcType="VARCHAR" />
+    <result column="c138" property="c138" jdbcType="VARCHAR" />
+    <result column="c139" property="c139" jdbcType="DATE" />
+    <result column="c140" property="c140" jdbcType="VARCHAR" />
+    <result column="c141" property="c141" jdbcType="VARCHAR" />
+    <result column="c142" property="c142" jdbcType="VARCHAR" />
+    <result column="c143" property="c143" jdbcType="VARCHAR" />
+    <result column="c144" property="c144" jdbcType="VARCHAR" />
+    <result column="c145" property="c145" jdbcType="VARCHAR" />
+    <result column="c146" property="c146" jdbcType="VARCHAR" />
+    <result column="c147" property="c147" jdbcType="VARCHAR" />
+    <result column="c148" property="c148" jdbcType="VARCHAR" />
+    <result column="c149" property="c149" jdbcType="VARCHAR" />
+    <result column="c150" property="c150" jdbcType="DATE" />
+    <result column="c151" property="c151" jdbcType="VARCHAR" />
+    <result column="c152" property="c152" jdbcType="VARCHAR" />
+    <result column="c153" property="c153" jdbcType="VARCHAR" />
+    <result column="c154" property="c154" jdbcType="VARCHAR" />
+    <result column="c155" property="c155" jdbcType="VARCHAR" />
+    <result column="c156" property="c156" jdbcType="VARCHAR" />
+    <result column="c157" property="c157" jdbcType="VARCHAR" />
+    <result column="c158" property="c158" jdbcType="VARCHAR" />
+    <result column="c159" property="c159" jdbcType="VARCHAR" />
+    <result column="c160" property="c160" jdbcType="VARCHAR" />
+    <result column="c161" property="c161" jdbcType="DATE" />
+    <result column="c162" property="c162" jdbcType="VARCHAR" />
+    <result column="c163" property="c163" jdbcType="VARCHAR" />
+    <result column="c164" property="c164" jdbcType="VARCHAR" />
+    <result column="c165" property="c165" jdbcType="VARCHAR" />
+    <result column="c166" property="c166" jdbcType="VARCHAR" />
+    <result column="c167" property="c167" jdbcType="VARCHAR" />
+    <result column="c168" property="c168" jdbcType="VARCHAR" />
+    <result column="c169" property="c169" jdbcType="VARCHAR" />
+    <result column="c170" property="c170" jdbcType="VARCHAR" />
+    <result column="c171" property="c171" jdbcType="VARCHAR" />
+    <result column="c172" property="c172" jdbcType="DATE" />
+    <result column="c173" property="c173" jdbcType="VARCHAR" />
+    <result column="c174" property="c174" jdbcType="VARCHAR" />
+    <result column="c175" property="c175" jdbcType="VARCHAR" />
+    <result column="c176" property="c176" jdbcType="VARCHAR" />
+    <result column="c177" property="c177" jdbcType="VARCHAR" />
+    <result column="c178" property="c178" jdbcType="VARCHAR" />
+    <result column="c179" property="c179" jdbcType="VARCHAR" />
+    <result column="c180" property="c180" jdbcType="VARCHAR" />
+    <result column="c181" property="c181" jdbcType="VARCHAR" />
+    <result column="c182" property="c182" jdbcType="VARCHAR" />
+    <result column="c183" property="c183" jdbcType="DATE" />
+    <result column="c184" property="c184" jdbcType="VARCHAR" />
+    <result column="c185" property="c185" jdbcType="VARCHAR" />
+    <result column="c186" property="c186" jdbcType="VARCHAR" />
+    <result column="c187" property="c187" jdbcType="VARCHAR" />
+    <result column="c188" property="c188" jdbcType="VARCHAR" />
+    <result column="c189" property="c189" jdbcType="VARCHAR" />
+    <result column="c190" property="c190" jdbcType="VARCHAR" />
+    <result column="c191" property="c191" jdbcType="VARCHAR" />
+    <result column="c192" property="c192" jdbcType="VARCHAR" />
+    <result column="c193" property="c193" jdbcType="VARCHAR" />
+    <result column="c194" property="c194" jdbcType="VARCHAR" />
+    <result column="c195" property="c195" jdbcType="VARCHAR" />
+    <result column="c196" property="c196" jdbcType="VARCHAR" />
+    <result column="c197" property="c197" jdbcType="VARCHAR" />
+    <result column="c198" property="c198" jdbcType="INTEGER" />
+    <result column="c199" property="c199" jdbcType="TINYINT" />
+    <result column="c200" property="c200" jdbcType="TINYINT" />
+    <result column="c201" property="c201" jdbcType="INTEGER" />
+    <result column="c202" property="c202" jdbcType="TINYINT" />
+    <result column="c203" property="c203" jdbcType="TINYINT" />
+    <result column="c204" property="c204" jdbcType="DECIMAL" />
+    <result column="c205" property="c205" jdbcType="DECIMAL" />
+    <result column="c206" property="c206" jdbcType="DECIMAL" />
+    <result column="c207" property="c207" jdbcType="DECIMAL" />
+    <result column="c208" property="c208" jdbcType="DECIMAL" />
+    <result column="c209" property="c209" jdbcType="DECIMAL" />
+    <result column="c210" property="c210" jdbcType="DECIMAL" />
+    <result column="c211" property="c211" jdbcType="DECIMAL" />
+    <result column="c212" property="c212" jdbcType="DECIMAL" />
+    <result column="c213" property="c213" jdbcType="DECIMAL" />
+    <result column="c214" property="c214" jdbcType="DECIMAL" />
+    <result column="c215" property="c215" jdbcType="DECIMAL" />
+    <result column="c216" property="c216" jdbcType="DECIMAL" />
+    <result column="c217" property="c217" jdbcType="DECIMAL" />
+    <result column="c218" property="c218" jdbcType="DECIMAL" />
+    <result column="c219" property="c219" jdbcType="DECIMAL" />
+    <result column="c220" property="c220" jdbcType="DECIMAL" />
+    <result column="c221" property="c221" jdbcType="DECIMAL" />
+    <result column="c222" property="c222" jdbcType="DECIMAL" />
+    <result column="c223" property="c223" jdbcType="DECIMAL" />
+    <result column="c224" property="c224" jdbcType="DECIMAL" />
+    <result column="c225" property="c225" jdbcType="DECIMAL" />
+    <result column="c226" property="c226" jdbcType="DECIMAL" />
+    <result column="c227" property="c227" jdbcType="DECIMAL" />
+    <result column="c228" property="c228" jdbcType="DECIMAL" />
+    <result column="c229" property="c229" jdbcType="DECIMAL" />
+    <result column="c230" property="c230" jdbcType="DECIMAL" />
+    <result column="c231" property="c231" jdbcType="DECIMAL" />
+    <result column="c232" property="c232" jdbcType="DECIMAL" />
+    <result column="c233" property="c233" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, code, mr_year, mr_quarter, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, 
+    c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, 
+    c32, c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48, 
+    c49, c50, c51, c52, c53, c54, c55, c56, c57, c58, c59, c60, c61, c62, c63, c64, c65, 
+    c66, c67, c68, c69, c70, c71, c72, c73, c74, c75, c76, c77, c78, c79, c80, c81, c82, 
+    c83, c84, c85, c86, c87, c88, c89, c90, c91, c92, c93, c94, c95, c96, c97, c98, c99, 
+    c100, c101, c102, c103, c104, c105, c106, c107, c108, c109, c110, c111, c112, c113, 
+    c114, c115, c116, c117, c118, c119, c120, c121, c122, c123, c124, c125, c126, c127, 
+    c128, c129, c130, c131, c132, c133, c134, c135, c136, c137, c138, c139, c140, c141, 
+    c142, c143, c144, c145, c146, c147, c148, c149, c150, c151, c152, c153, c154, c155, 
+    c156, c157, c158, c159, c160, c161, c162, c163, c164, c165, c166, c167, c168, c169, 
+    c170, c171, c172, c173, c174, c175, c176, c177, c178, c179, c180, c181, c182, c183, 
+    c184, c185, c186, c187, c188, c189, c190, c191, c192, c193, c194, c195, c196, c197, 
+    c198, c199, c200, c201, c202, c203, c204, c205, c206, c207, c208, c209, c210, c211, 
+    c212, c213, c214, c215, c216, c217, c218, c219, c220, c221, c222, c223, c224, c225, 
+    c226, c227, c228, c229, c230, c231, c232, c233
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="data.dao.pojo.exp.MedrecExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from medrec
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="data.dao.pojo.exp.MedrecExample" >
+    delete from medrec
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="data.dao.pojo.Medrec" >
+    insert into medrec (id, code, mr_year, mr_quarter, 
+      c3, c4, c5, c6, 
+      c7, c8, c9, c10, 
+      c11, c12, c13, c14, 
+      c15, c16, c17, c18, 
+      c19, c20, c21, c22, 
+      c23, c24, c25, c26, 
+      c27, c28, c29, c30, 
+      c31, c32, c33, c34, 
+      c35, c36, c37, c38, 
+      c39, c40, c41, c42, 
+      c43, c44, c45, c46, 
+      c47, c48, c49, c50, 
+      c51, c52, c53, c54, 
+      c55, c56, c57, c58, 
+      c59, c60, c61, c62, 
+      c63, c64, c65, c66, 
+      c67, c68, c69, c70, 
+      c71, c72, c73, c74, 
+      c75, c76, c77, c78, 
+      c79, c80, c81, c82, 
+      c83, c84, c85, c86, 
+      c87, c88, c89, c90, 
+      c91, c92, c93, c94, 
+      c95, c96, c97, c98, 
+      c99, c100, c101, c102, 
+      c103, c104, c105, c106, 
+      c107, c108, c109, c110, 
+      c111, c112, c113, c114, 
+      c115, c116, c117, c118, 
+      c119, c120, c121, c122, 
+      c123, c124, c125, c126, 
+      c127, c128, c129, c130, 
+      c131, c132, c133, c134, 
+      c135, c136, c137, c138, 
+      c139, c140, c141, c142, 
+      c143, c144, c145, c146, 
+      c147, c148, c149, c150, 
+      c151, c152, c153, c154, 
+      c155, c156, c157, c158, 
+      c159, c160, c161, c162, 
+      c163, c164, c165, c166, 
+      c167, c168, c169, c170, 
+      c171, c172, c173, c174, 
+      c175, c176, c177, c178, 
+      c179, c180, c181, c182, 
+      c183, c184, c185, c186, 
+      c187, c188, c189, c190, 
+      c191, c192, c193, c194, 
+      c195, c196, c197, c198, 
+      c199, c200, c201, c202, 
+      c203, c204, c205, c206, 
+      c207, c208, c209, c210, 
+      c211, c212, c213, c214, 
+      c215, c216, c217, c218, 
+      c219, c220, c221, c222, 
+      c223, c224, c225, c226, 
+      c227, c228, c229, c230, 
+      c231, c232, c233)
+    values (#{id,jdbcType=VARCHAR}, #{code,jdbcType=CHAR}, #{mrYear,jdbcType=DATE}, #{mrQuarter,jdbcType=BIT}, 
+      #{c3,jdbcType=VARCHAR}, #{c4,jdbcType=VARCHAR}, #{c5,jdbcType=SMALLINT}, #{c6,jdbcType=VARCHAR}, 
+      #{c7,jdbcType=VARCHAR}, #{c8,jdbcType=VARCHAR}, #{c9,jdbcType=DATE}, #{c10,jdbcType=DECIMAL}, 
+      #{c11,jdbcType=VARCHAR}, #{c12,jdbcType=DECIMAL}, #{c13,jdbcType=INTEGER}, #{c14,jdbcType=INTEGER}, 
+      #{c15,jdbcType=VARCHAR}, #{c16,jdbcType=VARCHAR}, #{c17,jdbcType=VARCHAR}, #{c18,jdbcType=VARCHAR}, 
+      #{c19,jdbcType=VARCHAR}, #{c20,jdbcType=VARCHAR}, #{c21,jdbcType=VARCHAR}, #{c22,jdbcType=VARCHAR}, 
+      #{c23,jdbcType=VARCHAR}, #{c24,jdbcType=VARCHAR}, #{c25,jdbcType=VARCHAR}, #{c26,jdbcType=VARCHAR}, 
+      #{c27,jdbcType=VARCHAR}, #{c28,jdbcType=VARCHAR}, #{c29,jdbcType=VARCHAR}, #{c30,jdbcType=VARCHAR}, 
+      #{c31,jdbcType=VARCHAR}, #{c32,jdbcType=VARCHAR}, #{c33,jdbcType=VARCHAR}, #{c34,jdbcType=DATE}, 
+      #{c35,jdbcType=TINYINT}, #{c36,jdbcType=TINYINT}, #{c37,jdbcType=VARCHAR}, #{c38,jdbcType=VARCHAR}, 
+      #{c39,jdbcType=DATE}, #{c40,jdbcType=TINYINT}, #{c41,jdbcType=TINYINT}, #{c42,jdbcType=VARCHAR}, 
+      #{c43,jdbcType=SMALLINT}, #{c44,jdbcType=VARCHAR}, #{c45,jdbcType=VARCHAR}, #{c46,jdbcType=VARCHAR}, 
+      #{c47,jdbcType=VARCHAR}, #{c48,jdbcType=VARCHAR}, #{c49,jdbcType=VARCHAR}, #{c50,jdbcType=VARCHAR}, 
+      #{c51,jdbcType=VARCHAR}, #{c52,jdbcType=VARCHAR}, #{c53,jdbcType=VARCHAR}, #{c54,jdbcType=VARCHAR}, 
+      #{c55,jdbcType=VARCHAR}, #{c56,jdbcType=VARCHAR}, #{c57,jdbcType=VARCHAR}, #{c58,jdbcType=VARCHAR}, 
+      #{c59,jdbcType=VARCHAR}, #{c60,jdbcType=VARCHAR}, #{c61,jdbcType=VARCHAR}, #{c62,jdbcType=VARCHAR}, 
+      #{c63,jdbcType=VARCHAR}, #{c64,jdbcType=VARCHAR}, #{c65,jdbcType=VARCHAR}, #{c66,jdbcType=VARCHAR}, 
+      #{c67,jdbcType=VARCHAR}, #{c68,jdbcType=VARCHAR}, #{c69,jdbcType=VARCHAR}, #{c70,jdbcType=VARCHAR}, 
+      #{c71,jdbcType=VARCHAR}, #{c72,jdbcType=VARCHAR}, #{c73,jdbcType=VARCHAR}, #{c74,jdbcType=VARCHAR}, 
+      #{c75,jdbcType=VARCHAR}, #{c76,jdbcType=VARCHAR}, #{c77,jdbcType=VARCHAR}, #{c78,jdbcType=VARCHAR}, 
+      #{c79,jdbcType=VARCHAR}, #{c80,jdbcType=VARCHAR}, #{c81,jdbcType=VARCHAR}, #{c82,jdbcType=VARCHAR}, 
+      #{c83,jdbcType=VARCHAR}, #{c84,jdbcType=VARCHAR}, #{c85,jdbcType=VARCHAR}, #{c86,jdbcType=VARCHAR}, 
+      #{c87,jdbcType=VARCHAR}, #{c88,jdbcType=VARCHAR}, #{c89,jdbcType=VARCHAR}, #{c90,jdbcType=VARCHAR}, 
+      #{c91,jdbcType=VARCHAR}, #{c92,jdbcType=VARCHAR}, #{c93,jdbcType=VARCHAR}, #{c94,jdbcType=VARCHAR}, 
+      #{c95,jdbcType=VARCHAR}, #{c96,jdbcType=VARCHAR}, #{c97,jdbcType=VARCHAR}, #{c98,jdbcType=VARCHAR}, 
+      #{c99,jdbcType=VARCHAR}, #{c100,jdbcType=VARCHAR}, #{c101,jdbcType=VARCHAR}, #{c102,jdbcType=VARCHAR}, 
+      #{c103,jdbcType=VARCHAR}, #{c104,jdbcType=VARCHAR}, #{c105,jdbcType=VARCHAR}, #{c106,jdbcType=VARCHAR}, 
+      #{c107,jdbcType=VARCHAR}, #{c108,jdbcType=VARCHAR}, #{c109,jdbcType=VARCHAR}, #{c110,jdbcType=VARCHAR}, 
+      #{c111,jdbcType=VARCHAR}, #{c112,jdbcType=VARCHAR}, #{c113,jdbcType=VARCHAR}, #{c114,jdbcType=VARCHAR}, 
+      #{c115,jdbcType=DATE}, #{c116,jdbcType=VARCHAR}, #{c117,jdbcType=DATE}, #{c118,jdbcType=VARCHAR}, 
+      #{c119,jdbcType=VARCHAR}, #{c120,jdbcType=VARCHAR}, #{c121,jdbcType=VARCHAR}, #{c122,jdbcType=VARCHAR}, 
+      #{c123,jdbcType=VARCHAR}, #{c124,jdbcType=VARCHAR}, #{c125,jdbcType=VARCHAR}, #{c126,jdbcType=VARCHAR}, 
+      #{c127,jdbcType=VARCHAR}, #{c128,jdbcType=DATE}, #{c129,jdbcType=VARCHAR}, #{c130,jdbcType=VARCHAR}, 
+      #{c131,jdbcType=VARCHAR}, #{c132,jdbcType=VARCHAR}, #{c133,jdbcType=VARCHAR}, #{c134,jdbcType=VARCHAR}, 
+      #{c135,jdbcType=VARCHAR}, #{c136,jdbcType=VARCHAR}, #{c137,jdbcType=VARCHAR}, #{c138,jdbcType=VARCHAR}, 
+      #{c139,jdbcType=DATE}, #{c140,jdbcType=VARCHAR}, #{c141,jdbcType=VARCHAR}, #{c142,jdbcType=VARCHAR}, 
+      #{c143,jdbcType=VARCHAR}, #{c144,jdbcType=VARCHAR}, #{c145,jdbcType=VARCHAR}, #{c146,jdbcType=VARCHAR}, 
+      #{c147,jdbcType=VARCHAR}, #{c148,jdbcType=VARCHAR}, #{c149,jdbcType=VARCHAR}, #{c150,jdbcType=DATE}, 
+      #{c151,jdbcType=VARCHAR}, #{c152,jdbcType=VARCHAR}, #{c153,jdbcType=VARCHAR}, #{c154,jdbcType=VARCHAR}, 
+      #{c155,jdbcType=VARCHAR}, #{c156,jdbcType=VARCHAR}, #{c157,jdbcType=VARCHAR}, #{c158,jdbcType=VARCHAR}, 
+      #{c159,jdbcType=VARCHAR}, #{c160,jdbcType=VARCHAR}, #{c161,jdbcType=DATE}, #{c162,jdbcType=VARCHAR}, 
+      #{c163,jdbcType=VARCHAR}, #{c164,jdbcType=VARCHAR}, #{c165,jdbcType=VARCHAR}, #{c166,jdbcType=VARCHAR}, 
+      #{c167,jdbcType=VARCHAR}, #{c168,jdbcType=VARCHAR}, #{c169,jdbcType=VARCHAR}, #{c170,jdbcType=VARCHAR}, 
+      #{c171,jdbcType=VARCHAR}, #{c172,jdbcType=DATE}, #{c173,jdbcType=VARCHAR}, #{c174,jdbcType=VARCHAR}, 
+      #{c175,jdbcType=VARCHAR}, #{c176,jdbcType=VARCHAR}, #{c177,jdbcType=VARCHAR}, #{c178,jdbcType=VARCHAR}, 
+      #{c179,jdbcType=VARCHAR}, #{c180,jdbcType=VARCHAR}, #{c181,jdbcType=VARCHAR}, #{c182,jdbcType=VARCHAR}, 
+      #{c183,jdbcType=DATE}, #{c184,jdbcType=VARCHAR}, #{c185,jdbcType=VARCHAR}, #{c186,jdbcType=VARCHAR}, 
+      #{c187,jdbcType=VARCHAR}, #{c188,jdbcType=VARCHAR}, #{c189,jdbcType=VARCHAR}, #{c190,jdbcType=VARCHAR}, 
+      #{c191,jdbcType=VARCHAR}, #{c192,jdbcType=VARCHAR}, #{c193,jdbcType=VARCHAR}, #{c194,jdbcType=VARCHAR}, 
+      #{c195,jdbcType=VARCHAR}, #{c196,jdbcType=VARCHAR}, #{c197,jdbcType=VARCHAR}, #{c198,jdbcType=INTEGER}, 
+      #{c199,jdbcType=TINYINT}, #{c200,jdbcType=TINYINT}, #{c201,jdbcType=INTEGER}, #{c202,jdbcType=TINYINT}, 
+      #{c203,jdbcType=TINYINT}, #{c204,jdbcType=DECIMAL}, #{c205,jdbcType=DECIMAL}, #{c206,jdbcType=DECIMAL}, 
+      #{c207,jdbcType=DECIMAL}, #{c208,jdbcType=DECIMAL}, #{c209,jdbcType=DECIMAL}, #{c210,jdbcType=DECIMAL}, 
+      #{c211,jdbcType=DECIMAL}, #{c212,jdbcType=DECIMAL}, #{c213,jdbcType=DECIMAL}, #{c214,jdbcType=DECIMAL}, 
+      #{c215,jdbcType=DECIMAL}, #{c216,jdbcType=DECIMAL}, #{c217,jdbcType=DECIMAL}, #{c218,jdbcType=DECIMAL}, 
+      #{c219,jdbcType=DECIMAL}, #{c220,jdbcType=DECIMAL}, #{c221,jdbcType=DECIMAL}, #{c222,jdbcType=DECIMAL}, 
+      #{c223,jdbcType=DECIMAL}, #{c224,jdbcType=DECIMAL}, #{c225,jdbcType=DECIMAL}, #{c226,jdbcType=DECIMAL}, 
+      #{c227,jdbcType=DECIMAL}, #{c228,jdbcType=DECIMAL}, #{c229,jdbcType=DECIMAL}, #{c230,jdbcType=DECIMAL}, 
+      #{c231,jdbcType=DECIMAL}, #{c232,jdbcType=DECIMAL}, #{c233,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="data.dao.pojo.Medrec" >
+    insert into medrec
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="mrYear != null" >
+        mr_year,
+      </if>
+      <if test="mrQuarter != null" >
+        mr_quarter,
+      </if>
+      <if test="c3 != null" >
+        c3,
+      </if>
+      <if test="c4 != null" >
+        c4,
+      </if>
+      <if test="c5 != null" >
+        c5,
+      </if>
+      <if test="c6 != null" >
+        c6,
+      </if>
+      <if test="c7 != null" >
+        c7,
+      </if>
+      <if test="c8 != null" >
+        c8,
+      </if>
+      <if test="c9 != null" >
+        c9,
+      </if>
+      <if test="c10 != null" >
+        c10,
+      </if>
+      <if test="c11 != null" >
+        c11,
+      </if>
+      <if test="c12 != null" >
+        c12,
+      </if>
+      <if test="c13 != null" >
+        c13,
+      </if>
+      <if test="c14 != null" >
+        c14,
+      </if>
+      <if test="c15 != null" >
+        c15,
+      </if>
+      <if test="c16 != null" >
+        c16,
+      </if>
+      <if test="c17 != null" >
+        c17,
+      </if>
+      <if test="c18 != null" >
+        c18,
+      </if>
+      <if test="c19 != null" >
+        c19,
+      </if>
+      <if test="c20 != null" >
+        c20,
+      </if>
+      <if test="c21 != null" >
+        c21,
+      </if>
+      <if test="c22 != null" >
+        c22,
+      </if>
+      <if test="c23 != null" >
+        c23,
+      </if>
+      <if test="c24 != null" >
+        c24,
+      </if>
+      <if test="c25 != null" >
+        c25,
+      </if>
+      <if test="c26 != null" >
+        c26,
+      </if>
+      <if test="c27 != null" >
+        c27,
+      </if>
+      <if test="c28 != null" >
+        c28,
+      </if>
+      <if test="c29 != null" >
+        c29,
+      </if>
+      <if test="c30 != null" >
+        c30,
+      </if>
+      <if test="c31 != null" >
+        c31,
+      </if>
+      <if test="c32 != null" >
+        c32,
+      </if>
+      <if test="c33 != null" >
+        c33,
+      </if>
+      <if test="c34 != null" >
+        c34,
+      </if>
+      <if test="c35 != null" >
+        c35,
+      </if>
+      <if test="c36 != null" >
+        c36,
+      </if>
+      <if test="c37 != null" >
+        c37,
+      </if>
+      <if test="c38 != null" >
+        c38,
+      </if>
+      <if test="c39 != null" >
+        c39,
+      </if>
+      <if test="c40 != null" >
+        c40,
+      </if>
+      <if test="c41 != null" >
+        c41,
+      </if>
+      <if test="c42 != null" >
+        c42,
+      </if>
+      <if test="c43 != null" >
+        c43,
+      </if>
+      <if test="c44 != null" >
+        c44,
+      </if>
+      <if test="c45 != null" >
+        c45,
+      </if>
+      <if test="c46 != null" >
+        c46,
+      </if>
+      <if test="c47 != null" >
+        c47,
+      </if>
+      <if test="c48 != null" >
+        c48,
+      </if>
+      <if test="c49 != null" >
+        c49,
+      </if>
+      <if test="c50 != null" >
+        c50,
+      </if>
+      <if test="c51 != null" >
+        c51,
+      </if>
+      <if test="c52 != null" >
+        c52,
+      </if>
+      <if test="c53 != null" >
+        c53,
+      </if>
+      <if test="c54 != null" >
+        c54,
+      </if>
+      <if test="c55 != null" >
+        c55,
+      </if>
+      <if test="c56 != null" >
+        c56,
+      </if>
+      <if test="c57 != null" >
+        c57,
+      </if>
+      <if test="c58 != null" >
+        c58,
+      </if>
+      <if test="c59 != null" >
+        c59,
+      </if>
+      <if test="c60 != null" >
+        c60,
+      </if>
+      <if test="c61 != null" >
+        c61,
+      </if>
+      <if test="c62 != null" >
+        c62,
+      </if>
+      <if test="c63 != null" >
+        c63,
+      </if>
+      <if test="c64 != null" >
+        c64,
+      </if>
+      <if test="c65 != null" >
+        c65,
+      </if>
+      <if test="c66 != null" >
+        c66,
+      </if>
+      <if test="c67 != null" >
+        c67,
+      </if>
+      <if test="c68 != null" >
+        c68,
+      </if>
+      <if test="c69 != null" >
+        c69,
+      </if>
+      <if test="c70 != null" >
+        c70,
+      </if>
+      <if test="c71 != null" >
+        c71,
+      </if>
+      <if test="c72 != null" >
+        c72,
+      </if>
+      <if test="c73 != null" >
+        c73,
+      </if>
+      <if test="c74 != null" >
+        c74,
+      </if>
+      <if test="c75 != null" >
+        c75,
+      </if>
+      <if test="c76 != null" >
+        c76,
+      </if>
+      <if test="c77 != null" >
+        c77,
+      </if>
+      <if test="c78 != null" >
+        c78,
+      </if>
+      <if test="c79 != null" >
+        c79,
+      </if>
+      <if test="c80 != null" >
+        c80,
+      </if>
+      <if test="c81 != null" >
+        c81,
+      </if>
+      <if test="c82 != null" >
+        c82,
+      </if>
+      <if test="c83 != null" >
+        c83,
+      </if>
+      <if test="c84 != null" >
+        c84,
+      </if>
+      <if test="c85 != null" >
+        c85,
+      </if>
+      <if test="c86 != null" >
+        c86,
+      </if>
+      <if test="c87 != null" >
+        c87,
+      </if>
+      <if test="c88 != null" >
+        c88,
+      </if>
+      <if test="c89 != null" >
+        c89,
+      </if>
+      <if test="c90 != null" >
+        c90,
+      </if>
+      <if test="c91 != null" >
+        c91,
+      </if>
+      <if test="c92 != null" >
+        c92,
+      </if>
+      <if test="c93 != null" >
+        c93,
+      </if>
+      <if test="c94 != null" >
+        c94,
+      </if>
+      <if test="c95 != null" >
+        c95,
+      </if>
+      <if test="c96 != null" >
+        c96,
+      </if>
+      <if test="c97 != null" >
+        c97,
+      </if>
+      <if test="c98 != null" >
+        c98,
+      </if>
+      <if test="c99 != null" >
+        c99,
+      </if>
+      <if test="c100 != null" >
+        c100,
+      </if>
+      <if test="c101 != null" >
+        c101,
+      </if>
+      <if test="c102 != null" >
+        c102,
+      </if>
+      <if test="c103 != null" >
+        c103,
+      </if>
+      <if test="c104 != null" >
+        c104,
+      </if>
+      <if test="c105 != null" >
+        c105,
+      </if>
+      <if test="c106 != null" >
+        c106,
+      </if>
+      <if test="c107 != null" >
+        c107,
+      </if>
+      <if test="c108 != null" >
+        c108,
+      </if>
+      <if test="c109 != null" >
+        c109,
+      </if>
+      <if test="c110 != null" >
+        c110,
+      </if>
+      <if test="c111 != null" >
+        c111,
+      </if>
+      <if test="c112 != null" >
+        c112,
+      </if>
+      <if test="c113 != null" >
+        c113,
+      </if>
+      <if test="c114 != null" >
+        c114,
+      </if>
+      <if test="c115 != null" >
+        c115,
+      </if>
+      <if test="c116 != null" >
+        c116,
+      </if>
+      <if test="c117 != null" >
+        c117,
+      </if>
+      <if test="c118 != null" >
+        c118,
+      </if>
+      <if test="c119 != null" >
+        c119,
+      </if>
+      <if test="c120 != null" >
+        c120,
+      </if>
+      <if test="c121 != null" >
+        c121,
+      </if>
+      <if test="c122 != null" >
+        c122,
+      </if>
+      <if test="c123 != null" >
+        c123,
+      </if>
+      <if test="c124 != null" >
+        c124,
+      </if>
+      <if test="c125 != null" >
+        c125,
+      </if>
+      <if test="c126 != null" >
+        c126,
+      </if>
+      <if test="c127 != null" >
+        c127,
+      </if>
+      <if test="c128 != null" >
+        c128,
+      </if>
+      <if test="c129 != null" >
+        c129,
+      </if>
+      <if test="c130 != null" >
+        c130,
+      </if>
+      <if test="c131 != null" >
+        c131,
+      </if>
+      <if test="c132 != null" >
+        c132,
+      </if>
+      <if test="c133 != null" >
+        c133,
+      </if>
+      <if test="c134 != null" >
+        c134,
+      </if>
+      <if test="c135 != null" >
+        c135,
+      </if>
+      <if test="c136 != null" >
+        c136,
+      </if>
+      <if test="c137 != null" >
+        c137,
+      </if>
+      <if test="c138 != null" >
+        c138,
+      </if>
+      <if test="c139 != null" >
+        c139,
+      </if>
+      <if test="c140 != null" >
+        c140,
+      </if>
+      <if test="c141 != null" >
+        c141,
+      </if>
+      <if test="c142 != null" >
+        c142,
+      </if>
+      <if test="c143 != null" >
+        c143,
+      </if>
+      <if test="c144 != null" >
+        c144,
+      </if>
+      <if test="c145 != null" >
+        c145,
+      </if>
+      <if test="c146 != null" >
+        c146,
+      </if>
+      <if test="c147 != null" >
+        c147,
+      </if>
+      <if test="c148 != null" >
+        c148,
+      </if>
+      <if test="c149 != null" >
+        c149,
+      </if>
+      <if test="c150 != null" >
+        c150,
+      </if>
+      <if test="c151 != null" >
+        c151,
+      </if>
+      <if test="c152 != null" >
+        c152,
+      </if>
+      <if test="c153 != null" >
+        c153,
+      </if>
+      <if test="c154 != null" >
+        c154,
+      </if>
+      <if test="c155 != null" >
+        c155,
+      </if>
+      <if test="c156 != null" >
+        c156,
+      </if>
+      <if test="c157 != null" >
+        c157,
+      </if>
+      <if test="c158 != null" >
+        c158,
+      </if>
+      <if test="c159 != null" >
+        c159,
+      </if>
+      <if test="c160 != null" >
+        c160,
+      </if>
+      <if test="c161 != null" >
+        c161,
+      </if>
+      <if test="c162 != null" >
+        c162,
+      </if>
+      <if test="c163 != null" >
+        c163,
+      </if>
+      <if test="c164 != null" >
+        c164,
+      </if>
+      <if test="c165 != null" >
+        c165,
+      </if>
+      <if test="c166 != null" >
+        c166,
+      </if>
+      <if test="c167 != null" >
+        c167,
+      </if>
+      <if test="c168 != null" >
+        c168,
+      </if>
+      <if test="c169 != null" >
+        c169,
+      </if>
+      <if test="c170 != null" >
+        c170,
+      </if>
+      <if test="c171 != null" >
+        c171,
+      </if>
+      <if test="c172 != null" >
+        c172,
+      </if>
+      <if test="c173 != null" >
+        c173,
+      </if>
+      <if test="c174 != null" >
+        c174,
+      </if>
+      <if test="c175 != null" >
+        c175,
+      </if>
+      <if test="c176 != null" >
+        c176,
+      </if>
+      <if test="c177 != null" >
+        c177,
+      </if>
+      <if test="c178 != null" >
+        c178,
+      </if>
+      <if test="c179 != null" >
+        c179,
+      </if>
+      <if test="c180 != null" >
+        c180,
+      </if>
+      <if test="c181 != null" >
+        c181,
+      </if>
+      <if test="c182 != null" >
+        c182,
+      </if>
+      <if test="c183 != null" >
+        c183,
+      </if>
+      <if test="c184 != null" >
+        c184,
+      </if>
+      <if test="c185 != null" >
+        c185,
+      </if>
+      <if test="c186 != null" >
+        c186,
+      </if>
+      <if test="c187 != null" >
+        c187,
+      </if>
+      <if test="c188 != null" >
+        c188,
+      </if>
+      <if test="c189 != null" >
+        c189,
+      </if>
+      <if test="c190 != null" >
+        c190,
+      </if>
+      <if test="c191 != null" >
+        c191,
+      </if>
+      <if test="c192 != null" >
+        c192,
+      </if>
+      <if test="c193 != null" >
+        c193,
+      </if>
+      <if test="c194 != null" >
+        c194,
+      </if>
+      <if test="c195 != null" >
+        c195,
+      </if>
+      <if test="c196 != null" >
+        c196,
+      </if>
+      <if test="c197 != null" >
+        c197,
+      </if>
+      <if test="c198 != null" >
+        c198,
+      </if>
+      <if test="c199 != null" >
+        c199,
+      </if>
+      <if test="c200 != null" >
+        c200,
+      </if>
+      <if test="c201 != null" >
+        c201,
+      </if>
+      <if test="c202 != null" >
+        c202,
+      </if>
+      <if test="c203 != null" >
+        c203,
+      </if>
+      <if test="c204 != null" >
+        c204,
+      </if>
+      <if test="c205 != null" >
+        c205,
+      </if>
+      <if test="c206 != null" >
+        c206,
+      </if>
+      <if test="c207 != null" >
+        c207,
+      </if>
+      <if test="c208 != null" >
+        c208,
+      </if>
+      <if test="c209 != null" >
+        c209,
+      </if>
+      <if test="c210 != null" >
+        c210,
+      </if>
+      <if test="c211 != null" >
+        c211,
+      </if>
+      <if test="c212 != null" >
+        c212,
+      </if>
+      <if test="c213 != null" >
+        c213,
+      </if>
+      <if test="c214 != null" >
+        c214,
+      </if>
+      <if test="c215 != null" >
+        c215,
+      </if>
+      <if test="c216 != null" >
+        c216,
+      </if>
+      <if test="c217 != null" >
+        c217,
+      </if>
+      <if test="c218 != null" >
+        c218,
+      </if>
+      <if test="c219 != null" >
+        c219,
+      </if>
+      <if test="c220 != null" >
+        c220,
+      </if>
+      <if test="c221 != null" >
+        c221,
+      </if>
+      <if test="c222 != null" >
+        c222,
+      </if>
+      <if test="c223 != null" >
+        c223,
+      </if>
+      <if test="c224 != null" >
+        c224,
+      </if>
+      <if test="c225 != null" >
+        c225,
+      </if>
+      <if test="c226 != null" >
+        c226,
+      </if>
+      <if test="c227 != null" >
+        c227,
+      </if>
+      <if test="c228 != null" >
+        c228,
+      </if>
+      <if test="c229 != null" >
+        c229,
+      </if>
+      <if test="c230 != null" >
+        c230,
+      </if>
+      <if test="c231 != null" >
+        c231,
+      </if>
+      <if test="c232 != null" >
+        c232,
+      </if>
+      <if test="c233 != null" >
+        c233,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=CHAR},
+      </if>
+      <if test="mrYear != null" >
+        #{mrYear,jdbcType=DATE},
+      </if>
+      <if test="mrQuarter != null" >
+        #{mrQuarter,jdbcType=BIT},
+      </if>
+      <if test="c3 != null" >
+        #{c3,jdbcType=VARCHAR},
+      </if>
+      <if test="c4 != null" >
+        #{c4,jdbcType=VARCHAR},
+      </if>
+      <if test="c5 != null" >
+        #{c5,jdbcType=SMALLINT},
+      </if>
+      <if test="c6 != null" >
+        #{c6,jdbcType=VARCHAR},
+      </if>
+      <if test="c7 != null" >
+        #{c7,jdbcType=VARCHAR},
+      </if>
+      <if test="c8 != null" >
+        #{c8,jdbcType=VARCHAR},
+      </if>
+      <if test="c9 != null" >
+        #{c9,jdbcType=DATE},
+      </if>
+      <if test="c10 != null" >
+        #{c10,jdbcType=DECIMAL},
+      </if>
+      <if test="c11 != null" >
+        #{c11,jdbcType=VARCHAR},
+      </if>
+      <if test="c12 != null" >
+        #{c12,jdbcType=DECIMAL},
+      </if>
+      <if test="c13 != null" >
+        #{c13,jdbcType=INTEGER},
+      </if>
+      <if test="c14 != null" >
+        #{c14,jdbcType=INTEGER},
+      </if>
+      <if test="c15 != null" >
+        #{c15,jdbcType=VARCHAR},
+      </if>
+      <if test="c16 != null" >
+        #{c16,jdbcType=VARCHAR},
+      </if>
+      <if test="c17 != null" >
+        #{c17,jdbcType=VARCHAR},
+      </if>
+      <if test="c18 != null" >
+        #{c18,jdbcType=VARCHAR},
+      </if>
+      <if test="c19 != null" >
+        #{c19,jdbcType=VARCHAR},
+      </if>
+      <if test="c20 != null" >
+        #{c20,jdbcType=VARCHAR},
+      </if>
+      <if test="c21 != null" >
+        #{c21,jdbcType=VARCHAR},
+      </if>
+      <if test="c22 != null" >
+        #{c22,jdbcType=VARCHAR},
+      </if>
+      <if test="c23 != null" >
+        #{c23,jdbcType=VARCHAR},
+      </if>
+      <if test="c24 != null" >
+        #{c24,jdbcType=VARCHAR},
+      </if>
+      <if test="c25 != null" >
+        #{c25,jdbcType=VARCHAR},
+      </if>
+      <if test="c26 != null" >
+        #{c26,jdbcType=VARCHAR},
+      </if>
+      <if test="c27 != null" >
+        #{c27,jdbcType=VARCHAR},
+      </if>
+      <if test="c28 != null" >
+        #{c28,jdbcType=VARCHAR},
+      </if>
+      <if test="c29 != null" >
+        #{c29,jdbcType=VARCHAR},
+      </if>
+      <if test="c30 != null" >
+        #{c30,jdbcType=VARCHAR},
+      </if>
+      <if test="c31 != null" >
+        #{c31,jdbcType=VARCHAR},
+      </if>
+      <if test="c32 != null" >
+        #{c32,jdbcType=VARCHAR},
+      </if>
+      <if test="c33 != null" >
+        #{c33,jdbcType=VARCHAR},
+      </if>
+      <if test="c34 != null" >
+        #{c34,jdbcType=DATE},
+      </if>
+      <if test="c35 != null" >
+        #{c35,jdbcType=TINYINT},
+      </if>
+      <if test="c36 != null" >
+        #{c36,jdbcType=TINYINT},
+      </if>
+      <if test="c37 != null" >
+        #{c37,jdbcType=VARCHAR},
+      </if>
+      <if test="c38 != null" >
+        #{c38,jdbcType=VARCHAR},
+      </if>
+      <if test="c39 != null" >
+        #{c39,jdbcType=DATE},
+      </if>
+      <if test="c40 != null" >
+        #{c40,jdbcType=TINYINT},
+      </if>
+      <if test="c41 != null" >
+        #{c41,jdbcType=TINYINT},
+      </if>
+      <if test="c42 != null" >
+        #{c42,jdbcType=VARCHAR},
+      </if>
+      <if test="c43 != null" >
+        #{c43,jdbcType=SMALLINT},
+      </if>
+      <if test="c44 != null" >
+        #{c44,jdbcType=VARCHAR},
+      </if>
+      <if test="c45 != null" >
+        #{c45,jdbcType=VARCHAR},
+      </if>
+      <if test="c46 != null" >
+        #{c46,jdbcType=VARCHAR},
+      </if>
+      <if test="c47 != null" >
+        #{c47,jdbcType=VARCHAR},
+      </if>
+      <if test="c48 != null" >
+        #{c48,jdbcType=VARCHAR},
+      </if>
+      <if test="c49 != null" >
+        #{c49,jdbcType=VARCHAR},
+      </if>
+      <if test="c50 != null" >
+        #{c50,jdbcType=VARCHAR},
+      </if>
+      <if test="c51 != null" >
+        #{c51,jdbcType=VARCHAR},
+      </if>
+      <if test="c52 != null" >
+        #{c52,jdbcType=VARCHAR},
+      </if>
+      <if test="c53 != null" >
+        #{c53,jdbcType=VARCHAR},
+      </if>
+      <if test="c54 != null" >
+        #{c54,jdbcType=VARCHAR},
+      </if>
+      <if test="c55 != null" >
+        #{c55,jdbcType=VARCHAR},
+      </if>
+      <if test="c56 != null" >
+        #{c56,jdbcType=VARCHAR},
+      </if>
+      <if test="c57 != null" >
+        #{c57,jdbcType=VARCHAR},
+      </if>
+      <if test="c58 != null" >
+        #{c58,jdbcType=VARCHAR},
+      </if>
+      <if test="c59 != null" >
+        #{c59,jdbcType=VARCHAR},
+      </if>
+      <if test="c60 != null" >
+        #{c60,jdbcType=VARCHAR},
+      </if>
+      <if test="c61 != null" >
+        #{c61,jdbcType=VARCHAR},
+      </if>
+      <if test="c62 != null" >
+        #{c62,jdbcType=VARCHAR},
+      </if>
+      <if test="c63 != null" >
+        #{c63,jdbcType=VARCHAR},
+      </if>
+      <if test="c64 != null" >
+        #{c64,jdbcType=VARCHAR},
+      </if>
+      <if test="c65 != null" >
+        #{c65,jdbcType=VARCHAR},
+      </if>
+      <if test="c66 != null" >
+        #{c66,jdbcType=VARCHAR},
+      </if>
+      <if test="c67 != null" >
+        #{c67,jdbcType=VARCHAR},
+      </if>
+      <if test="c68 != null" >
+        #{c68,jdbcType=VARCHAR},
+      </if>
+      <if test="c69 != null" >
+        #{c69,jdbcType=VARCHAR},
+      </if>
+      <if test="c70 != null" >
+        #{c70,jdbcType=VARCHAR},
+      </if>
+      <if test="c71 != null" >
+        #{c71,jdbcType=VARCHAR},
+      </if>
+      <if test="c72 != null" >
+        #{c72,jdbcType=VARCHAR},
+      </if>
+      <if test="c73 != null" >
+        #{c73,jdbcType=VARCHAR},
+      </if>
+      <if test="c74 != null" >
+        #{c74,jdbcType=VARCHAR},
+      </if>
+      <if test="c75 != null" >
+        #{c75,jdbcType=VARCHAR},
+      </if>
+      <if test="c76 != null" >
+        #{c76,jdbcType=VARCHAR},
+      </if>
+      <if test="c77 != null" >
+        #{c77,jdbcType=VARCHAR},
+      </if>
+      <if test="c78 != null" >
+        #{c78,jdbcType=VARCHAR},
+      </if>
+      <if test="c79 != null" >
+        #{c79,jdbcType=VARCHAR},
+      </if>
+      <if test="c80 != null" >
+        #{c80,jdbcType=VARCHAR},
+      </if>
+      <if test="c81 != null" >
+        #{c81,jdbcType=VARCHAR},
+      </if>
+      <if test="c82 != null" >
+        #{c82,jdbcType=VARCHAR},
+      </if>
+      <if test="c83 != null" >
+        #{c83,jdbcType=VARCHAR},
+      </if>
+      <if test="c84 != null" >
+        #{c84,jdbcType=VARCHAR},
+      </if>
+      <if test="c85 != null" >
+        #{c85,jdbcType=VARCHAR},
+      </if>
+      <if test="c86 != null" >
+        #{c86,jdbcType=VARCHAR},
+      </if>
+      <if test="c87 != null" >
+        #{c87,jdbcType=VARCHAR},
+      </if>
+      <if test="c88 != null" >
+        #{c88,jdbcType=VARCHAR},
+      </if>
+      <if test="c89 != null" >
+        #{c89,jdbcType=VARCHAR},
+      </if>
+      <if test="c90 != null" >
+        #{c90,jdbcType=VARCHAR},
+      </if>
+      <if test="c91 != null" >
+        #{c91,jdbcType=VARCHAR},
+      </if>
+      <if test="c92 != null" >
+        #{c92,jdbcType=VARCHAR},
+      </if>
+      <if test="c93 != null" >
+        #{c93,jdbcType=VARCHAR},
+      </if>
+      <if test="c94 != null" >
+        #{c94,jdbcType=VARCHAR},
+      </if>
+      <if test="c95 != null" >
+        #{c95,jdbcType=VARCHAR},
+      </if>
+      <if test="c96 != null" >
+        #{c96,jdbcType=VARCHAR},
+      </if>
+      <if test="c97 != null" >
+        #{c97,jdbcType=VARCHAR},
+      </if>
+      <if test="c98 != null" >
+        #{c98,jdbcType=VARCHAR},
+      </if>
+      <if test="c99 != null" >
+        #{c99,jdbcType=VARCHAR},
+      </if>
+      <if test="c100 != null" >
+        #{c100,jdbcType=VARCHAR},
+      </if>
+      <if test="c101 != null" >
+        #{c101,jdbcType=VARCHAR},
+      </if>
+      <if test="c102 != null" >
+        #{c102,jdbcType=VARCHAR},
+      </if>
+      <if test="c103 != null" >
+        #{c103,jdbcType=VARCHAR},
+      </if>
+      <if test="c104 != null" >
+        #{c104,jdbcType=VARCHAR},
+      </if>
+      <if test="c105 != null" >
+        #{c105,jdbcType=VARCHAR},
+      </if>
+      <if test="c106 != null" >
+        #{c106,jdbcType=VARCHAR},
+      </if>
+      <if test="c107 != null" >
+        #{c107,jdbcType=VARCHAR},
+      </if>
+      <if test="c108 != null" >
+        #{c108,jdbcType=VARCHAR},
+      </if>
+      <if test="c109 != null" >
+        #{c109,jdbcType=VARCHAR},
+      </if>
+      <if test="c110 != null" >
+        #{c110,jdbcType=VARCHAR},
+      </if>
+      <if test="c111 != null" >
+        #{c111,jdbcType=VARCHAR},
+      </if>
+      <if test="c112 != null" >
+        #{c112,jdbcType=VARCHAR},
+      </if>
+      <if test="c113 != null" >
+        #{c113,jdbcType=VARCHAR},
+      </if>
+      <if test="c114 != null" >
+        #{c114,jdbcType=VARCHAR},
+      </if>
+      <if test="c115 != null" >
+        #{c115,jdbcType=DATE},
+      </if>
+      <if test="c116 != null" >
+        #{c116,jdbcType=VARCHAR},
+      </if>
+      <if test="c117 != null" >
+        #{c117,jdbcType=DATE},
+      </if>
+      <if test="c118 != null" >
+        #{c118,jdbcType=VARCHAR},
+      </if>
+      <if test="c119 != null" >
+        #{c119,jdbcType=VARCHAR},
+      </if>
+      <if test="c120 != null" >
+        #{c120,jdbcType=VARCHAR},
+      </if>
+      <if test="c121 != null" >
+        #{c121,jdbcType=VARCHAR},
+      </if>
+      <if test="c122 != null" >
+        #{c122,jdbcType=VARCHAR},
+      </if>
+      <if test="c123 != null" >
+        #{c123,jdbcType=VARCHAR},
+      </if>
+      <if test="c124 != null" >
+        #{c124,jdbcType=VARCHAR},
+      </if>
+      <if test="c125 != null" >
+        #{c125,jdbcType=VARCHAR},
+      </if>
+      <if test="c126 != null" >
+        #{c126,jdbcType=VARCHAR},
+      </if>
+      <if test="c127 != null" >
+        #{c127,jdbcType=VARCHAR},
+      </if>
+      <if test="c128 != null" >
+        #{c128,jdbcType=DATE},
+      </if>
+      <if test="c129 != null" >
+        #{c129,jdbcType=VARCHAR},
+      </if>
+      <if test="c130 != null" >
+        #{c130,jdbcType=VARCHAR},
+      </if>
+      <if test="c131 != null" >
+        #{c131,jdbcType=VARCHAR},
+      </if>
+      <if test="c132 != null" >
+        #{c132,jdbcType=VARCHAR},
+      </if>
+      <if test="c133 != null" >
+        #{c133,jdbcType=VARCHAR},
+      </if>
+      <if test="c134 != null" >
+        #{c134,jdbcType=VARCHAR},
+      </if>
+      <if test="c135 != null" >
+        #{c135,jdbcType=VARCHAR},
+      </if>
+      <if test="c136 != null" >
+        #{c136,jdbcType=VARCHAR},
+      </if>
+      <if test="c137 != null" >
+        #{c137,jdbcType=VARCHAR},
+      </if>
+      <if test="c138 != null" >
+        #{c138,jdbcType=VARCHAR},
+      </if>
+      <if test="c139 != null" >
+        #{c139,jdbcType=DATE},
+      </if>
+      <if test="c140 != null" >
+        #{c140,jdbcType=VARCHAR},
+      </if>
+      <if test="c141 != null" >
+        #{c141,jdbcType=VARCHAR},
+      </if>
+      <if test="c142 != null" >
+        #{c142,jdbcType=VARCHAR},
+      </if>
+      <if test="c143 != null" >
+        #{c143,jdbcType=VARCHAR},
+      </if>
+      <if test="c144 != null" >
+        #{c144,jdbcType=VARCHAR},
+      </if>
+      <if test="c145 != null" >
+        #{c145,jdbcType=VARCHAR},
+      </if>
+      <if test="c146 != null" >
+        #{c146,jdbcType=VARCHAR},
+      </if>
+      <if test="c147 != null" >
+        #{c147,jdbcType=VARCHAR},
+      </if>
+      <if test="c148 != null" >
+        #{c148,jdbcType=VARCHAR},
+      </if>
+      <if test="c149 != null" >
+        #{c149,jdbcType=VARCHAR},
+      </if>
+      <if test="c150 != null" >
+        #{c150,jdbcType=DATE},
+      </if>
+      <if test="c151 != null" >
+        #{c151,jdbcType=VARCHAR},
+      </if>
+      <if test="c152 != null" >
+        #{c152,jdbcType=VARCHAR},
+      </if>
+      <if test="c153 != null" >
+        #{c153,jdbcType=VARCHAR},
+      </if>
+      <if test="c154 != null" >
+        #{c154,jdbcType=VARCHAR},
+      </if>
+      <if test="c155 != null" >
+        #{c155,jdbcType=VARCHAR},
+      </if>
+      <if test="c156 != null" >
+        #{c156,jdbcType=VARCHAR},
+      </if>
+      <if test="c157 != null" >
+        #{c157,jdbcType=VARCHAR},
+      </if>
+      <if test="c158 != null" >
+        #{c158,jdbcType=VARCHAR},
+      </if>
+      <if test="c159 != null" >
+        #{c159,jdbcType=VARCHAR},
+      </if>
+      <if test="c160 != null" >
+        #{c160,jdbcType=VARCHAR},
+      </if>
+      <if test="c161 != null" >
+        #{c161,jdbcType=DATE},
+      </if>
+      <if test="c162 != null" >
+        #{c162,jdbcType=VARCHAR},
+      </if>
+      <if test="c163 != null" >
+        #{c163,jdbcType=VARCHAR},
+      </if>
+      <if test="c164 != null" >
+        #{c164,jdbcType=VARCHAR},
+      </if>
+      <if test="c165 != null" >
+        #{c165,jdbcType=VARCHAR},
+      </if>
+      <if test="c166 != null" >
+        #{c166,jdbcType=VARCHAR},
+      </if>
+      <if test="c167 != null" >
+        #{c167,jdbcType=VARCHAR},
+      </if>
+      <if test="c168 != null" >
+        #{c168,jdbcType=VARCHAR},
+      </if>
+      <if test="c169 != null" >
+        #{c169,jdbcType=VARCHAR},
+      </if>
+      <if test="c170 != null" >
+        #{c170,jdbcType=VARCHAR},
+      </if>
+      <if test="c171 != null" >
+        #{c171,jdbcType=VARCHAR},
+      </if>
+      <if test="c172 != null" >
+        #{c172,jdbcType=DATE},
+      </if>
+      <if test="c173 != null" >
+        #{c173,jdbcType=VARCHAR},
+      </if>
+      <if test="c174 != null" >
+        #{c174,jdbcType=VARCHAR},
+      </if>
+      <if test="c175 != null" >
+        #{c175,jdbcType=VARCHAR},
+      </if>
+      <if test="c176 != null" >
+        #{c176,jdbcType=VARCHAR},
+      </if>
+      <if test="c177 != null" >
+        #{c177,jdbcType=VARCHAR},
+      </if>
+      <if test="c178 != null" >
+        #{c178,jdbcType=VARCHAR},
+      </if>
+      <if test="c179 != null" >
+        #{c179,jdbcType=VARCHAR},
+      </if>
+      <if test="c180 != null" >
+        #{c180,jdbcType=VARCHAR},
+      </if>
+      <if test="c181 != null" >
+        #{c181,jdbcType=VARCHAR},
+      </if>
+      <if test="c182 != null" >
+        #{c182,jdbcType=VARCHAR},
+      </if>
+      <if test="c183 != null" >
+        #{c183,jdbcType=DATE},
+      </if>
+      <if test="c184 != null" >
+        #{c184,jdbcType=VARCHAR},
+      </if>
+      <if test="c185 != null" >
+        #{c185,jdbcType=VARCHAR},
+      </if>
+      <if test="c186 != null" >
+        #{c186,jdbcType=VARCHAR},
+      </if>
+      <if test="c187 != null" >
+        #{c187,jdbcType=VARCHAR},
+      </if>
+      <if test="c188 != null" >
+        #{c188,jdbcType=VARCHAR},
+      </if>
+      <if test="c189 != null" >
+        #{c189,jdbcType=VARCHAR},
+      </if>
+      <if test="c190 != null" >
+        #{c190,jdbcType=VARCHAR},
+      </if>
+      <if test="c191 != null" >
+        #{c191,jdbcType=VARCHAR},
+      </if>
+      <if test="c192 != null" >
+        #{c192,jdbcType=VARCHAR},
+      </if>
+      <if test="c193 != null" >
+        #{c193,jdbcType=VARCHAR},
+      </if>
+      <if test="c194 != null" >
+        #{c194,jdbcType=VARCHAR},
+      </if>
+      <if test="c195 != null" >
+        #{c195,jdbcType=VARCHAR},
+      </if>
+      <if test="c196 != null" >
+        #{c196,jdbcType=VARCHAR},
+      </if>
+      <if test="c197 != null" >
+        #{c197,jdbcType=VARCHAR},
+      </if>
+      <if test="c198 != null" >
+        #{c198,jdbcType=INTEGER},
+      </if>
+      <if test="c199 != null" >
+        #{c199,jdbcType=TINYINT},
+      </if>
+      <if test="c200 != null" >
+        #{c200,jdbcType=TINYINT},
+      </if>
+      <if test="c201 != null" >
+        #{c201,jdbcType=INTEGER},
+      </if>
+      <if test="c202 != null" >
+        #{c202,jdbcType=TINYINT},
+      </if>
+      <if test="c203 != null" >
+        #{c203,jdbcType=TINYINT},
+      </if>
+      <if test="c204 != null" >
+        #{c204,jdbcType=DECIMAL},
+      </if>
+      <if test="c205 != null" >
+        #{c205,jdbcType=DECIMAL},
+      </if>
+      <if test="c206 != null" >
+        #{c206,jdbcType=DECIMAL},
+      </if>
+      <if test="c207 != null" >
+        #{c207,jdbcType=DECIMAL},
+      </if>
+      <if test="c208 != null" >
+        #{c208,jdbcType=DECIMAL},
+      </if>
+      <if test="c209 != null" >
+        #{c209,jdbcType=DECIMAL},
+      </if>
+      <if test="c210 != null" >
+        #{c210,jdbcType=DECIMAL},
+      </if>
+      <if test="c211 != null" >
+        #{c211,jdbcType=DECIMAL},
+      </if>
+      <if test="c212 != null" >
+        #{c212,jdbcType=DECIMAL},
+      </if>
+      <if test="c213 != null" >
+        #{c213,jdbcType=DECIMAL},
+      </if>
+      <if test="c214 != null" >
+        #{c214,jdbcType=DECIMAL},
+      </if>
+      <if test="c215 != null" >
+        #{c215,jdbcType=DECIMAL},
+      </if>
+      <if test="c216 != null" >
+        #{c216,jdbcType=DECIMAL},
+      </if>
+      <if test="c217 != null" >
+        #{c217,jdbcType=DECIMAL},
+      </if>
+      <if test="c218 != null" >
+        #{c218,jdbcType=DECIMAL},
+      </if>
+      <if test="c219 != null" >
+        #{c219,jdbcType=DECIMAL},
+      </if>
+      <if test="c220 != null" >
+        #{c220,jdbcType=DECIMAL},
+      </if>
+      <if test="c221 != null" >
+        #{c221,jdbcType=DECIMAL},
+      </if>
+      <if test="c222 != null" >
+        #{c222,jdbcType=DECIMAL},
+      </if>
+      <if test="c223 != null" >
+        #{c223,jdbcType=DECIMAL},
+      </if>
+      <if test="c224 != null" >
+        #{c224,jdbcType=DECIMAL},
+      </if>
+      <if test="c225 != null" >
+        #{c225,jdbcType=DECIMAL},
+      </if>
+      <if test="c226 != null" >
+        #{c226,jdbcType=DECIMAL},
+      </if>
+      <if test="c227 != null" >
+        #{c227,jdbcType=DECIMAL},
+      </if>
+      <if test="c228 != null" >
+        #{c228,jdbcType=DECIMAL},
+      </if>
+      <if test="c229 != null" >
+        #{c229,jdbcType=DECIMAL},
+      </if>
+      <if test="c230 != null" >
+        #{c230,jdbcType=DECIMAL},
+      </if>
+      <if test="c231 != null" >
+        #{c231,jdbcType=DECIMAL},
+      </if>
+      <if test="c232 != null" >
+        #{c232,jdbcType=DECIMAL},
+      </if>
+      <if test="c233 != null" >
+        #{c233,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="data.dao.pojo.exp.MedrecExample" resultType="java.lang.Integer" >
+    select count(*) from medrec
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update medrec
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null" >
+        code = #{record.code,jdbcType=CHAR},
+      </if>
+      <if test="record.mrYear != null" >
+        mr_year = #{record.mrYear,jdbcType=DATE},
+      </if>
+      <if test="record.mrQuarter != null" >
+        mr_quarter = #{record.mrQuarter,jdbcType=BIT},
+      </if>
+      <if test="record.c3 != null" >
+        c3 = #{record.c3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c4 != null" >
+        c4 = #{record.c4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c5 != null" >
+        c5 = #{record.c5,jdbcType=SMALLINT},
+      </if>
+      <if test="record.c6 != null" >
+        c6 = #{record.c6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c7 != null" >
+        c7 = #{record.c7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c8 != null" >
+        c8 = #{record.c8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c9 != null" >
+        c9 = #{record.c9,jdbcType=DATE},
+      </if>
+      <if test="record.c10 != null" >
+        c10 = #{record.c10,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c11 != null" >
+        c11 = #{record.c11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c12 != null" >
+        c12 = #{record.c12,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c13 != null" >
+        c13 = #{record.c13,jdbcType=INTEGER},
+      </if>
+      <if test="record.c14 != null" >
+        c14 = #{record.c14,jdbcType=INTEGER},
+      </if>
+      <if test="record.c15 != null" >
+        c15 = #{record.c15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c16 != null" >
+        c16 = #{record.c16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c17 != null" >
+        c17 = #{record.c17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c18 != null" >
+        c18 = #{record.c18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c19 != null" >
+        c19 = #{record.c19,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c20 != null" >
+        c20 = #{record.c20,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c21 != null" >
+        c21 = #{record.c21,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c22 != null" >
+        c22 = #{record.c22,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c23 != null" >
+        c23 = #{record.c23,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c24 != null" >
+        c24 = #{record.c24,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c25 != null" >
+        c25 = #{record.c25,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c26 != null" >
+        c26 = #{record.c26,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c27 != null" >
+        c27 = #{record.c27,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c28 != null" >
+        c28 = #{record.c28,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c29 != null" >
+        c29 = #{record.c29,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c30 != null" >
+        c30 = #{record.c30,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c31 != null" >
+        c31 = #{record.c31,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c32 != null" >
+        c32 = #{record.c32,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c33 != null" >
+        c33 = #{record.c33,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c34 != null" >
+        c34 = #{record.c34,jdbcType=DATE},
+      </if>
+      <if test="record.c35 != null" >
+        c35 = #{record.c35,jdbcType=TINYINT},
+      </if>
+      <if test="record.c36 != null" >
+        c36 = #{record.c36,jdbcType=TINYINT},
+      </if>
+      <if test="record.c37 != null" >
+        c37 = #{record.c37,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c38 != null" >
+        c38 = #{record.c38,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c39 != null" >
+        c39 = #{record.c39,jdbcType=DATE},
+      </if>
+      <if test="record.c40 != null" >
+        c40 = #{record.c40,jdbcType=TINYINT},
+      </if>
+      <if test="record.c41 != null" >
+        c41 = #{record.c41,jdbcType=TINYINT},
+      </if>
+      <if test="record.c42 != null" >
+        c42 = #{record.c42,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c43 != null" >
+        c43 = #{record.c43,jdbcType=SMALLINT},
+      </if>
+      <if test="record.c44 != null" >
+        c44 = #{record.c44,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c45 != null" >
+        c45 = #{record.c45,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c46 != null" >
+        c46 = #{record.c46,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c47 != null" >
+        c47 = #{record.c47,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c48 != null" >
+        c48 = #{record.c48,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c49 != null" >
+        c49 = #{record.c49,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c50 != null" >
+        c50 = #{record.c50,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c51 != null" >
+        c51 = #{record.c51,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c52 != null" >
+        c52 = #{record.c52,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c53 != null" >
+        c53 = #{record.c53,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c54 != null" >
+        c54 = #{record.c54,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c55 != null" >
+        c55 = #{record.c55,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c56 != null" >
+        c56 = #{record.c56,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c57 != null" >
+        c57 = #{record.c57,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c58 != null" >
+        c58 = #{record.c58,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c59 != null" >
+        c59 = #{record.c59,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c60 != null" >
+        c60 = #{record.c60,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c61 != null" >
+        c61 = #{record.c61,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c62 != null" >
+        c62 = #{record.c62,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c63 != null" >
+        c63 = #{record.c63,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c64 != null" >
+        c64 = #{record.c64,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c65 != null" >
+        c65 = #{record.c65,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c66 != null" >
+        c66 = #{record.c66,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c67 != null" >
+        c67 = #{record.c67,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c68 != null" >
+        c68 = #{record.c68,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c69 != null" >
+        c69 = #{record.c69,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c70 != null" >
+        c70 = #{record.c70,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c71 != null" >
+        c71 = #{record.c71,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c72 != null" >
+        c72 = #{record.c72,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c73 != null" >
+        c73 = #{record.c73,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c74 != null" >
+        c74 = #{record.c74,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c75 != null" >
+        c75 = #{record.c75,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c76 != null" >
+        c76 = #{record.c76,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c77 != null" >
+        c77 = #{record.c77,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c78 != null" >
+        c78 = #{record.c78,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c79 != null" >
+        c79 = #{record.c79,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c80 != null" >
+        c80 = #{record.c80,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c81 != null" >
+        c81 = #{record.c81,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c82 != null" >
+        c82 = #{record.c82,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c83 != null" >
+        c83 = #{record.c83,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c84 != null" >
+        c84 = #{record.c84,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c85 != null" >
+        c85 = #{record.c85,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c86 != null" >
+        c86 = #{record.c86,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c87 != null" >
+        c87 = #{record.c87,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c88 != null" >
+        c88 = #{record.c88,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c89 != null" >
+        c89 = #{record.c89,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c90 != null" >
+        c90 = #{record.c90,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c91 != null" >
+        c91 = #{record.c91,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c92 != null" >
+        c92 = #{record.c92,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c93 != null" >
+        c93 = #{record.c93,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c94 != null" >
+        c94 = #{record.c94,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c95 != null" >
+        c95 = #{record.c95,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c96 != null" >
+        c96 = #{record.c96,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c97 != null" >
+        c97 = #{record.c97,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c98 != null" >
+        c98 = #{record.c98,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c99 != null" >
+        c99 = #{record.c99,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c100 != null" >
+        c100 = #{record.c100,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c101 != null" >
+        c101 = #{record.c101,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c102 != null" >
+        c102 = #{record.c102,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c103 != null" >
+        c103 = #{record.c103,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c104 != null" >
+        c104 = #{record.c104,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c105 != null" >
+        c105 = #{record.c105,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c106 != null" >
+        c106 = #{record.c106,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c107 != null" >
+        c107 = #{record.c107,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c108 != null" >
+        c108 = #{record.c108,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c109 != null" >
+        c109 = #{record.c109,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c110 != null" >
+        c110 = #{record.c110,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c111 != null" >
+        c111 = #{record.c111,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c112 != null" >
+        c112 = #{record.c112,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c113 != null" >
+        c113 = #{record.c113,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c114 != null" >
+        c114 = #{record.c114,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c115 != null" >
+        c115 = #{record.c115,jdbcType=DATE},
+      </if>
+      <if test="record.c116 != null" >
+        c116 = #{record.c116,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c117 != null" >
+        c117 = #{record.c117,jdbcType=DATE},
+      </if>
+      <if test="record.c118 != null" >
+        c118 = #{record.c118,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c119 != null" >
+        c119 = #{record.c119,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c120 != null" >
+        c120 = #{record.c120,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c121 != null" >
+        c121 = #{record.c121,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c122 != null" >
+        c122 = #{record.c122,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c123 != null" >
+        c123 = #{record.c123,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c124 != null" >
+        c124 = #{record.c124,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c125 != null" >
+        c125 = #{record.c125,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c126 != null" >
+        c126 = #{record.c126,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c127 != null" >
+        c127 = #{record.c127,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c128 != null" >
+        c128 = #{record.c128,jdbcType=DATE},
+      </if>
+      <if test="record.c129 != null" >
+        c129 = #{record.c129,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c130 != null" >
+        c130 = #{record.c130,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c131 != null" >
+        c131 = #{record.c131,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c132 != null" >
+        c132 = #{record.c132,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c133 != null" >
+        c133 = #{record.c133,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c134 != null" >
+        c134 = #{record.c134,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c135 != null" >
+        c135 = #{record.c135,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c136 != null" >
+        c136 = #{record.c136,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c137 != null" >
+        c137 = #{record.c137,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c138 != null" >
+        c138 = #{record.c138,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c139 != null" >
+        c139 = #{record.c139,jdbcType=DATE},
+      </if>
+      <if test="record.c140 != null" >
+        c140 = #{record.c140,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c141 != null" >
+        c141 = #{record.c141,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c142 != null" >
+        c142 = #{record.c142,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c143 != null" >
+        c143 = #{record.c143,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c144 != null" >
+        c144 = #{record.c144,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c145 != null" >
+        c145 = #{record.c145,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c146 != null" >
+        c146 = #{record.c146,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c147 != null" >
+        c147 = #{record.c147,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c148 != null" >
+        c148 = #{record.c148,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c149 != null" >
+        c149 = #{record.c149,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c150 != null" >
+        c150 = #{record.c150,jdbcType=DATE},
+      </if>
+      <if test="record.c151 != null" >
+        c151 = #{record.c151,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c152 != null" >
+        c152 = #{record.c152,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c153 != null" >
+        c153 = #{record.c153,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c154 != null" >
+        c154 = #{record.c154,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c155 != null" >
+        c155 = #{record.c155,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c156 != null" >
+        c156 = #{record.c156,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c157 != null" >
+        c157 = #{record.c157,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c158 != null" >
+        c158 = #{record.c158,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c159 != null" >
+        c159 = #{record.c159,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c160 != null" >
+        c160 = #{record.c160,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c161 != null" >
+        c161 = #{record.c161,jdbcType=DATE},
+      </if>
+      <if test="record.c162 != null" >
+        c162 = #{record.c162,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c163 != null" >
+        c163 = #{record.c163,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c164 != null" >
+        c164 = #{record.c164,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c165 != null" >
+        c165 = #{record.c165,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c166 != null" >
+        c166 = #{record.c166,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c167 != null" >
+        c167 = #{record.c167,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c168 != null" >
+        c168 = #{record.c168,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c169 != null" >
+        c169 = #{record.c169,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c170 != null" >
+        c170 = #{record.c170,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c171 != null" >
+        c171 = #{record.c171,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c172 != null" >
+        c172 = #{record.c172,jdbcType=DATE},
+      </if>
+      <if test="record.c173 != null" >
+        c173 = #{record.c173,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c174 != null" >
+        c174 = #{record.c174,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c175 != null" >
+        c175 = #{record.c175,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c176 != null" >
+        c176 = #{record.c176,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c177 != null" >
+        c177 = #{record.c177,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c178 != null" >
+        c178 = #{record.c178,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c179 != null" >
+        c179 = #{record.c179,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c180 != null" >
+        c180 = #{record.c180,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c181 != null" >
+        c181 = #{record.c181,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c182 != null" >
+        c182 = #{record.c182,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c183 != null" >
+        c183 = #{record.c183,jdbcType=DATE},
+      </if>
+      <if test="record.c184 != null" >
+        c184 = #{record.c184,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c185 != null" >
+        c185 = #{record.c185,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c186 != null" >
+        c186 = #{record.c186,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c187 != null" >
+        c187 = #{record.c187,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c188 != null" >
+        c188 = #{record.c188,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c189 != null" >
+        c189 = #{record.c189,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c190 != null" >
+        c190 = #{record.c190,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c191 != null" >
+        c191 = #{record.c191,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c192 != null" >
+        c192 = #{record.c192,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c193 != null" >
+        c193 = #{record.c193,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c194 != null" >
+        c194 = #{record.c194,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c195 != null" >
+        c195 = #{record.c195,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c196 != null" >
+        c196 = #{record.c196,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c197 != null" >
+        c197 = #{record.c197,jdbcType=VARCHAR},
+      </if>
+      <if test="record.c198 != null" >
+        c198 = #{record.c198,jdbcType=INTEGER},
+      </if>
+      <if test="record.c199 != null" >
+        c199 = #{record.c199,jdbcType=TINYINT},
+      </if>
+      <if test="record.c200 != null" >
+        c200 = #{record.c200,jdbcType=TINYINT},
+      </if>
+      <if test="record.c201 != null" >
+        c201 = #{record.c201,jdbcType=INTEGER},
+      </if>
+      <if test="record.c202 != null" >
+        c202 = #{record.c202,jdbcType=TINYINT},
+      </if>
+      <if test="record.c203 != null" >
+        c203 = #{record.c203,jdbcType=TINYINT},
+      </if>
+      <if test="record.c204 != null" >
+        c204 = #{record.c204,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c205 != null" >
+        c205 = #{record.c205,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c206 != null" >
+        c206 = #{record.c206,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c207 != null" >
+        c207 = #{record.c207,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c208 != null" >
+        c208 = #{record.c208,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c209 != null" >
+        c209 = #{record.c209,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c210 != null" >
+        c210 = #{record.c210,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c211 != null" >
+        c211 = #{record.c211,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c212 != null" >
+        c212 = #{record.c212,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c213 != null" >
+        c213 = #{record.c213,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c214 != null" >
+        c214 = #{record.c214,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c215 != null" >
+        c215 = #{record.c215,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c216 != null" >
+        c216 = #{record.c216,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c217 != null" >
+        c217 = #{record.c217,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c218 != null" >
+        c218 = #{record.c218,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c219 != null" >
+        c219 = #{record.c219,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c220 != null" >
+        c220 = #{record.c220,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c221 != null" >
+        c221 = #{record.c221,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c222 != null" >
+        c222 = #{record.c222,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c223 != null" >
+        c223 = #{record.c223,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c224 != null" >
+        c224 = #{record.c224,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c225 != null" >
+        c225 = #{record.c225,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c226 != null" >
+        c226 = #{record.c226,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c227 != null" >
+        c227 = #{record.c227,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c228 != null" >
+        c228 = #{record.c228,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c229 != null" >
+        c229 = #{record.c229,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c230 != null" >
+        c230 = #{record.c230,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c231 != null" >
+        c231 = #{record.c231,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c232 != null" >
+        c232 = #{record.c232,jdbcType=DECIMAL},
+      </if>
+      <if test="record.c233 != null" >
+        c233 = #{record.c233,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update medrec
+    set id = #{record.id,jdbcType=VARCHAR},
+      code = #{record.code,jdbcType=CHAR},
+      mr_year = #{record.mrYear,jdbcType=DATE},
+      mr_quarter = #{record.mrQuarter,jdbcType=BIT},
+      c3 = #{record.c3,jdbcType=VARCHAR},
+      c4 = #{record.c4,jdbcType=VARCHAR},
+      c5 = #{record.c5,jdbcType=SMALLINT},
+      c6 = #{record.c6,jdbcType=VARCHAR},
+      c7 = #{record.c7,jdbcType=VARCHAR},
+      c8 = #{record.c8,jdbcType=VARCHAR},
+      c9 = #{record.c9,jdbcType=DATE},
+      c10 = #{record.c10,jdbcType=DECIMAL},
+      c11 = #{record.c11,jdbcType=VARCHAR},
+      c12 = #{record.c12,jdbcType=DECIMAL},
+      c13 = #{record.c13,jdbcType=INTEGER},
+      c14 = #{record.c14,jdbcType=INTEGER},
+      c15 = #{record.c15,jdbcType=VARCHAR},
+      c16 = #{record.c16,jdbcType=VARCHAR},
+      c17 = #{record.c17,jdbcType=VARCHAR},
+      c18 = #{record.c18,jdbcType=VARCHAR},
+      c19 = #{record.c19,jdbcType=VARCHAR},
+      c20 = #{record.c20,jdbcType=VARCHAR},
+      c21 = #{record.c21,jdbcType=VARCHAR},
+      c22 = #{record.c22,jdbcType=VARCHAR},
+      c23 = #{record.c23,jdbcType=VARCHAR},
+      c24 = #{record.c24,jdbcType=VARCHAR},
+      c25 = #{record.c25,jdbcType=VARCHAR},
+      c26 = #{record.c26,jdbcType=VARCHAR},
+      c27 = #{record.c27,jdbcType=VARCHAR},
+      c28 = #{record.c28,jdbcType=VARCHAR},
+      c29 = #{record.c29,jdbcType=VARCHAR},
+      c30 = #{record.c30,jdbcType=VARCHAR},
+      c31 = #{record.c31,jdbcType=VARCHAR},
+      c32 = #{record.c32,jdbcType=VARCHAR},
+      c33 = #{record.c33,jdbcType=VARCHAR},
+      c34 = #{record.c34,jdbcType=DATE},
+      c35 = #{record.c35,jdbcType=TINYINT},
+      c36 = #{record.c36,jdbcType=TINYINT},
+      c37 = #{record.c37,jdbcType=VARCHAR},
+      c38 = #{record.c38,jdbcType=VARCHAR},
+      c39 = #{record.c39,jdbcType=DATE},
+      c40 = #{record.c40,jdbcType=TINYINT},
+      c41 = #{record.c41,jdbcType=TINYINT},
+      c42 = #{record.c42,jdbcType=VARCHAR},
+      c43 = #{record.c43,jdbcType=SMALLINT},
+      c44 = #{record.c44,jdbcType=VARCHAR},
+      c45 = #{record.c45,jdbcType=VARCHAR},
+      c46 = #{record.c46,jdbcType=VARCHAR},
+      c47 = #{record.c47,jdbcType=VARCHAR},
+      c48 = #{record.c48,jdbcType=VARCHAR},
+      c49 = #{record.c49,jdbcType=VARCHAR},
+      c50 = #{record.c50,jdbcType=VARCHAR},
+      c51 = #{record.c51,jdbcType=VARCHAR},
+      c52 = #{record.c52,jdbcType=VARCHAR},
+      c53 = #{record.c53,jdbcType=VARCHAR},
+      c54 = #{record.c54,jdbcType=VARCHAR},
+      c55 = #{record.c55,jdbcType=VARCHAR},
+      c56 = #{record.c56,jdbcType=VARCHAR},
+      c57 = #{record.c57,jdbcType=VARCHAR},
+      c58 = #{record.c58,jdbcType=VARCHAR},
+      c59 = #{record.c59,jdbcType=VARCHAR},
+      c60 = #{record.c60,jdbcType=VARCHAR},
+      c61 = #{record.c61,jdbcType=VARCHAR},
+      c62 = #{record.c62,jdbcType=VARCHAR},
+      c63 = #{record.c63,jdbcType=VARCHAR},
+      c64 = #{record.c64,jdbcType=VARCHAR},
+      c65 = #{record.c65,jdbcType=VARCHAR},
+      c66 = #{record.c66,jdbcType=VARCHAR},
+      c67 = #{record.c67,jdbcType=VARCHAR},
+      c68 = #{record.c68,jdbcType=VARCHAR},
+      c69 = #{record.c69,jdbcType=VARCHAR},
+      c70 = #{record.c70,jdbcType=VARCHAR},
+      c71 = #{record.c71,jdbcType=VARCHAR},
+      c72 = #{record.c72,jdbcType=VARCHAR},
+      c73 = #{record.c73,jdbcType=VARCHAR},
+      c74 = #{record.c74,jdbcType=VARCHAR},
+      c75 = #{record.c75,jdbcType=VARCHAR},
+      c76 = #{record.c76,jdbcType=VARCHAR},
+      c77 = #{record.c77,jdbcType=VARCHAR},
+      c78 = #{record.c78,jdbcType=VARCHAR},
+      c79 = #{record.c79,jdbcType=VARCHAR},
+      c80 = #{record.c80,jdbcType=VARCHAR},
+      c81 = #{record.c81,jdbcType=VARCHAR},
+      c82 = #{record.c82,jdbcType=VARCHAR},
+      c83 = #{record.c83,jdbcType=VARCHAR},
+      c84 = #{record.c84,jdbcType=VARCHAR},
+      c85 = #{record.c85,jdbcType=VARCHAR},
+      c86 = #{record.c86,jdbcType=VARCHAR},
+      c87 = #{record.c87,jdbcType=VARCHAR},
+      c88 = #{record.c88,jdbcType=VARCHAR},
+      c89 = #{record.c89,jdbcType=VARCHAR},
+      c90 = #{record.c90,jdbcType=VARCHAR},
+      c91 = #{record.c91,jdbcType=VARCHAR},
+      c92 = #{record.c92,jdbcType=VARCHAR},
+      c93 = #{record.c93,jdbcType=VARCHAR},
+      c94 = #{record.c94,jdbcType=VARCHAR},
+      c95 = #{record.c95,jdbcType=VARCHAR},
+      c96 = #{record.c96,jdbcType=VARCHAR},
+      c97 = #{record.c97,jdbcType=VARCHAR},
+      c98 = #{record.c98,jdbcType=VARCHAR},
+      c99 = #{record.c99,jdbcType=VARCHAR},
+      c100 = #{record.c100,jdbcType=VARCHAR},
+      c101 = #{record.c101,jdbcType=VARCHAR},
+      c102 = #{record.c102,jdbcType=VARCHAR},
+      c103 = #{record.c103,jdbcType=VARCHAR},
+      c104 = #{record.c104,jdbcType=VARCHAR},
+      c105 = #{record.c105,jdbcType=VARCHAR},
+      c106 = #{record.c106,jdbcType=VARCHAR},
+      c107 = #{record.c107,jdbcType=VARCHAR},
+      c108 = #{record.c108,jdbcType=VARCHAR},
+      c109 = #{record.c109,jdbcType=VARCHAR},
+      c110 = #{record.c110,jdbcType=VARCHAR},
+      c111 = #{record.c111,jdbcType=VARCHAR},
+      c112 = #{record.c112,jdbcType=VARCHAR},
+      c113 = #{record.c113,jdbcType=VARCHAR},
+      c114 = #{record.c114,jdbcType=VARCHAR},
+      c115 = #{record.c115,jdbcType=DATE},
+      c116 = #{record.c116,jdbcType=VARCHAR},
+      c117 = #{record.c117,jdbcType=DATE},
+      c118 = #{record.c118,jdbcType=VARCHAR},
+      c119 = #{record.c119,jdbcType=VARCHAR},
+      c120 = #{record.c120,jdbcType=VARCHAR},
+      c121 = #{record.c121,jdbcType=VARCHAR},
+      c122 = #{record.c122,jdbcType=VARCHAR},
+      c123 = #{record.c123,jdbcType=VARCHAR},
+      c124 = #{record.c124,jdbcType=VARCHAR},
+      c125 = #{record.c125,jdbcType=VARCHAR},
+      c126 = #{record.c126,jdbcType=VARCHAR},
+      c127 = #{record.c127,jdbcType=VARCHAR},
+      c128 = #{record.c128,jdbcType=DATE},
+      c129 = #{record.c129,jdbcType=VARCHAR},
+      c130 = #{record.c130,jdbcType=VARCHAR},
+      c131 = #{record.c131,jdbcType=VARCHAR},
+      c132 = #{record.c132,jdbcType=VARCHAR},
+      c133 = #{record.c133,jdbcType=VARCHAR},
+      c134 = #{record.c134,jdbcType=VARCHAR},
+      c135 = #{record.c135,jdbcType=VARCHAR},
+      c136 = #{record.c136,jdbcType=VARCHAR},
+      c137 = #{record.c137,jdbcType=VARCHAR},
+      c138 = #{record.c138,jdbcType=VARCHAR},
+      c139 = #{record.c139,jdbcType=DATE},
+      c140 = #{record.c140,jdbcType=VARCHAR},
+      c141 = #{record.c141,jdbcType=VARCHAR},
+      c142 = #{record.c142,jdbcType=VARCHAR},
+      c143 = #{record.c143,jdbcType=VARCHAR},
+      c144 = #{record.c144,jdbcType=VARCHAR},
+      c145 = #{record.c145,jdbcType=VARCHAR},
+      c146 = #{record.c146,jdbcType=VARCHAR},
+      c147 = #{record.c147,jdbcType=VARCHAR},
+      c148 = #{record.c148,jdbcType=VARCHAR},
+      c149 = #{record.c149,jdbcType=VARCHAR},
+      c150 = #{record.c150,jdbcType=DATE},
+      c151 = #{record.c151,jdbcType=VARCHAR},
+      c152 = #{record.c152,jdbcType=VARCHAR},
+      c153 = #{record.c153,jdbcType=VARCHAR},
+      c154 = #{record.c154,jdbcType=VARCHAR},
+      c155 = #{record.c155,jdbcType=VARCHAR},
+      c156 = #{record.c156,jdbcType=VARCHAR},
+      c157 = #{record.c157,jdbcType=VARCHAR},
+      c158 = #{record.c158,jdbcType=VARCHAR},
+      c159 = #{record.c159,jdbcType=VARCHAR},
+      c160 = #{record.c160,jdbcType=VARCHAR},
+      c161 = #{record.c161,jdbcType=DATE},
+      c162 = #{record.c162,jdbcType=VARCHAR},
+      c163 = #{record.c163,jdbcType=VARCHAR},
+      c164 = #{record.c164,jdbcType=VARCHAR},
+      c165 = #{record.c165,jdbcType=VARCHAR},
+      c166 = #{record.c166,jdbcType=VARCHAR},
+      c167 = #{record.c167,jdbcType=VARCHAR},
+      c168 = #{record.c168,jdbcType=VARCHAR},
+      c169 = #{record.c169,jdbcType=VARCHAR},
+      c170 = #{record.c170,jdbcType=VARCHAR},
+      c171 = #{record.c171,jdbcType=VARCHAR},
+      c172 = #{record.c172,jdbcType=DATE},
+      c173 = #{record.c173,jdbcType=VARCHAR},
+      c174 = #{record.c174,jdbcType=VARCHAR},
+      c175 = #{record.c175,jdbcType=VARCHAR},
+      c176 = #{record.c176,jdbcType=VARCHAR},
+      c177 = #{record.c177,jdbcType=VARCHAR},
+      c178 = #{record.c178,jdbcType=VARCHAR},
+      c179 = #{record.c179,jdbcType=VARCHAR},
+      c180 = #{record.c180,jdbcType=VARCHAR},
+      c181 = #{record.c181,jdbcType=VARCHAR},
+      c182 = #{record.c182,jdbcType=VARCHAR},
+      c183 = #{record.c183,jdbcType=DATE},
+      c184 = #{record.c184,jdbcType=VARCHAR},
+      c185 = #{record.c185,jdbcType=VARCHAR},
+      c186 = #{record.c186,jdbcType=VARCHAR},
+      c187 = #{record.c187,jdbcType=VARCHAR},
+      c188 = #{record.c188,jdbcType=VARCHAR},
+      c189 = #{record.c189,jdbcType=VARCHAR},
+      c190 = #{record.c190,jdbcType=VARCHAR},
+      c191 = #{record.c191,jdbcType=VARCHAR},
+      c192 = #{record.c192,jdbcType=VARCHAR},
+      c193 = #{record.c193,jdbcType=VARCHAR},
+      c194 = #{record.c194,jdbcType=VARCHAR},
+      c195 = #{record.c195,jdbcType=VARCHAR},
+      c196 = #{record.c196,jdbcType=VARCHAR},
+      c197 = #{record.c197,jdbcType=VARCHAR},
+      c198 = #{record.c198,jdbcType=INTEGER},
+      c199 = #{record.c199,jdbcType=TINYINT},
+      c200 = #{record.c200,jdbcType=TINYINT},
+      c201 = #{record.c201,jdbcType=INTEGER},
+      c202 = #{record.c202,jdbcType=TINYINT},
+      c203 = #{record.c203,jdbcType=TINYINT},
+      c204 = #{record.c204,jdbcType=DECIMAL},
+      c205 = #{record.c205,jdbcType=DECIMAL},
+      c206 = #{record.c206,jdbcType=DECIMAL},
+      c207 = #{record.c207,jdbcType=DECIMAL},
+      c208 = #{record.c208,jdbcType=DECIMAL},
+      c209 = #{record.c209,jdbcType=DECIMAL},
+      c210 = #{record.c210,jdbcType=DECIMAL},
+      c211 = #{record.c211,jdbcType=DECIMAL},
+      c212 = #{record.c212,jdbcType=DECIMAL},
+      c213 = #{record.c213,jdbcType=DECIMAL},
+      c214 = #{record.c214,jdbcType=DECIMAL},
+      c215 = #{record.c215,jdbcType=DECIMAL},
+      c216 = #{record.c216,jdbcType=DECIMAL},
+      c217 = #{record.c217,jdbcType=DECIMAL},
+      c218 = #{record.c218,jdbcType=DECIMAL},
+      c219 = #{record.c219,jdbcType=DECIMAL},
+      c220 = #{record.c220,jdbcType=DECIMAL},
+      c221 = #{record.c221,jdbcType=DECIMAL},
+      c222 = #{record.c222,jdbcType=DECIMAL},
+      c223 = #{record.c223,jdbcType=DECIMAL},
+      c224 = #{record.c224,jdbcType=DECIMAL},
+      c225 = #{record.c225,jdbcType=DECIMAL},
+      c226 = #{record.c226,jdbcType=DECIMAL},
+      c227 = #{record.c227,jdbcType=DECIMAL},
+      c228 = #{record.c228,jdbcType=DECIMAL},
+      c229 = #{record.c229,jdbcType=DECIMAL},
+      c230 = #{record.c230,jdbcType=DECIMAL},
+      c231 = #{record.c231,jdbcType=DECIMAL},
+      c232 = #{record.c232,jdbcType=DECIMAL},
+      c233 = #{record.c233,jdbcType=DECIMAL}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

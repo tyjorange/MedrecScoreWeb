@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+	<!-- 设置根目录 -->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>webapp.root</param-value>
+	</context-param>
+	<!-- log4j -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	<!-- 加载spring容器 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		    classpath:spring-mybatis.xml
+            classpath:net/bull/javamelody/monitoring-spring.xml
+        </param-value>
+	</context-param>
+	<!-- 3000表示 开一条WatchDog线程每60秒扫描一下配置文件的变化;这样便于日志存放位置的改变 -->
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>3000</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<!-- spring容器监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 防止Spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<!-- -->
+	<!-- <listener> <listener-class>com.slst.datapipe.listener.MyListener</listener-class> 
+		</listener> -->
+
+	<!-- 支持Restful风格的请求URL -->
+	<filter>
+		<filter-name>HiddenHttpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HiddenHttpMethodFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 过滤中文乱码 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- JavaMelody -->
+	<filter>
+		<filter-name>monitoring</filter-name>
+		<filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>monitoring</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>net.bull.javamelody.SessionListener</listener-class>
+	</listener>
+	<!-- 配置前端控制器 -->
+	<servlet>
+		<servlet-name>SpringMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!--加载前端控制器配置文件 上下文配置位置 -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-mvc.xml</param-value>
+		</init-param>
+		<!-- 随服务器启动 -->
+		<load-on-startup>1</load-on-startup>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<!-- restful风格URL -->
+		<servlet-name>SpringMVC</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- -->
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error404.jsp</location>
+	</error-page>
+</web-app>
